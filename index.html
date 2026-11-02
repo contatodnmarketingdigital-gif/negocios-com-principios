@@ -1,0 +1,515 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Negócios com Princípios · Delaine Nogueira</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F6F7F4; --white:#fff; --ink:#0E1A14; --muted:#5B6B62; --line:#E3E8E2;
+  --green:#0F6B45; --green-2:#13A35F; --mint:#E7F6EE; --deep:#0B2A1D; --gold:#D8A93B;
+  --r:20px; --shadow:0 20px 50px -20px rgba(14,40,28,.25);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55;font-size:16px;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+h1,h2,h3{font-family:'Space Grotesk',sans-serif;letter-spacing:-.02em;line-height:1.08}
+h1{font-size:clamp(2.15rem,6vw,3.6rem);font-weight:700}
+h2{font-size:clamp(1.7rem,4.4vw,2.6rem);font-weight:700;max-width:760px}
+h3{font-size:1.2rem;font-weight:600}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+section{padding:84px 0}
+.alt{background:var(--white)}
+.lead{color:var(--muted);font-size:1.08rem;max-width:620px;margin-top:14px}
+.center{text-align:center}.center h2,.center .lead{margin-left:auto;margin-right:auto}
+.btn{display:inline-flex;align-items:center;gap:10px;background:linear-gradient(135deg,var(--green-2),var(--green));color:#fff;font-weight:600;font-family:'Space Grotesk';font-size:1.08rem;padding:17px 28px;border-radius:14px;text-decoration:none;box-shadow:0 14px 30px -12px rgba(19,163,95,.7);transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn svg{width:18px;height:18px}
+
+/* HERO */
+.hero{position:relative;overflow:hidden;padding:28px 0 72px;background:
+  radial-gradient(900px 500px at 85% 10%,rgba(19,163,95,.14),transparent 60%),
+  radial-gradient(600px 400px at 0% 100%,rgba(216,169,59,.12),transparent 60%),var(--bg)}
+.hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:44px 44px;mask-image:radial-gradient(ellipse at 70% 30%,#000 10%,transparent 70%);opacity:.6;pointer-events:none}
+.nav{display:flex;align-items:center;justify-content:space-between;position:relative;margin-bottom:46px}
+.logo{display:flex;align-items:center;gap:10px;font-family:'Space Grotesk';font-weight:700}
+.logo i{width:34px;height:34px;border-radius:10px;background:var(--deep);display:grid;place-items:center}
+.logo i svg{width:18px;height:18px}
+.nav small{color:var(--muted);font-size:.85rem}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;position:relative}
+.pill{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);padding:7px 14px;border-radius:99px;font-size:.85rem;font-weight:500;margin-bottom:20px}
+.pill b{width:8px;height:8px;border-radius:50%;background:var(--green-2);box-shadow:0 0 0 4px rgba(19,163,95,.18)}
+.hero h1 em{font-style:normal;background:linear-gradient(135deg,var(--green-2),var(--green));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .lead{font-size:1.15rem}
+.checks{display:flex;flex-wrap:wrap;gap:10px 22px;margin:26px 0 30px;list-style:none}
+.checks li{display:flex;align-items:center;gap:8px;font-weight:500;font-size:.95rem}
+.checks svg{width:20px;height:20px;flex:none}
+.trust{margin-top:16px;color:var(--muted);font-size:.88rem}
+.hero-visual{position:relative;justify-self:center;width:min(440px,100%)}
+.hero-photo{border-radius:28px;overflow:hidden;aspect-ratio:4/5;background:#e9ece6;box-shadow:var(--shadow)}
+.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 0}
+.float{position:absolute;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.8);border-radius:16px;padding:12px 14px;box-shadow:0 18px 40px -18px rgba(0,0,0,.35);font-size:.85rem;display:flex;gap:10px;align-items:center}
+.float .ic{width:36px;height:36px;border-radius:10px;display:grid;place-items:center;flex:none}
+.float strong{display:block;font-family:'Space Grotesk';font-size:.92rem}
+.float span{color:var(--muted);font-size:.78rem}
+.f1{left:-28px;top:50%}.f2{right:-22px;top:68%}.f3{left:-14px;bottom:-4%}
+.tag{position:absolute;right:12px;bottom:-48px;font-size:.7rem;color:var(--muted)}
+
+/* PAIN */
+.pain{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px}
+.card{background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:26px}
+.alt .card{background:var(--bg)}
+.card .num{font-family:'Space Grotesk';font-weight:700;color:var(--green);font-size:.9rem;margin-bottom:14px;display:inline-block;background:var(--mint);padding:4px 10px;border-radius:8px}
+.card p{color:var(--muted);margin-top:8px}
+.punch{margin-top:34px;font-family:'Space Grotesk';font-size:1.3rem;font-weight:600}
+.punch span{color:var(--green)}
+
+/* QUOTE */
+.quote{background:var(--deep);color:#fff;padding:70px 0;text-align:center;position:relative;overflow:hidden}
+.quote::before{content:"";position:absolute;inset:0;background:radial-gradient(600px 300px at 50% 0%,rgba(19,163,95,.35),transparent 70%)}
+.quote p{position:relative;font-family:'Space Grotesk';font-weight:700;font-size:clamp(1.7rem,5vw,2.8rem);line-height:1.15;letter-spacing:-.02em}
+.quote span{color:#7EE2AD}
+.quote small{position:relative;display:block;margin-top:16px;color:#B9D4C6;font-size:1rem}
+.hero h1{font-size:clamp(1.9rem,4.6vw,3.1rem)}
+/* WHO */
+.biz{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:40px}
+.biz figure{position:relative;border-radius:18px;overflow:hidden;aspect-ratio:4/3}
+.biz img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.biz figure:hover img{transform:scale(1.05)}
+.biz figcaption{position:absolute;left:12px;bottom:12px;background:rgba(11,42,29,.78);backdrop-filter:blur(6px);color:#fff;font-weight:600;font-size:.88rem;padding:7px 12px;border-radius:10px}
+
+/* STEPS */
+.steps{display:grid;gap:22px;margin-top:44px}
+.step{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;background:var(--bg);border:1px solid var(--line);border-radius:28px;padding:36px;overflow:hidden}
+.step:nth-child(even) .step-vis{order:-1}
+.step .n{font-family:'Space Grotesk';font-weight:700;font-size:3.4rem;line-height:1;background:linear-gradient(135deg,var(--green-2),var(--green));-webkit-background-clip:text;background-clip:text;color:transparent}
+.step h3{font-size:1.6rem;margin:10px 0 10px}
+.step p{color:var(--muted)}
+.step ul{list-style:none;margin-top:16px;display:grid;gap:8px}
+.step li{display:flex;gap:10px;align-items:flex-start;font-size:.95rem}
+.step li svg{width:18px;height:18px;flex:none;margin-top:3px}
+.step-vis{display:grid;place-items:center;min-height:300px;position:relative}
+.step-vis::before{content:"";position:absolute;width:280px;height:280px;border-radius:50%;background:radial-gradient(circle,rgba(19,163,95,.18),transparent 70%)}
+.phone{position:relative;width:230px;border-radius:34px;background:#0c0f0d;padding:9px;box-shadow:0 30px 60px -25px rgba(0,0,0,.5)}
+.phone .scr{border-radius:26px;overflow:hidden;background:#fff;aspect-ratio:9/19}
+.phone .scr img{width:100%;height:100%;object-fit:cover;object-position:top}
+.ui{position:relative;width:min(330px,100%);background:#fff;border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow);padding:20px;font-size:.88rem}
+.ui-h{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;font-family:'Space Grotesk';font-weight:600}
+.ui-h em{font-style:normal;font-size:.72rem;background:var(--mint);color:var(--green);padding:4px 8px;border-radius:99px}
+.row{display:flex;justify-content:space-between;padding:11px 0;border-top:1px solid var(--line)}
+.row span{color:var(--muted)}.row b{font-weight:600}
+.bar{height:8px;border-radius:99px;background:var(--line);margin-top:14px;overflow:hidden}
+.bar i{display:block;height:100%;width:72%;background:linear-gradient(90deg,var(--green-2),var(--green))}
+.chat{width:min(300px,100%);background:#ECE5DD;border-radius:22px;padding:16px;box-shadow:var(--shadow);position:relative;display:grid;gap:8px;font-size:.88rem}
+.chat .top{display:flex;align-items:center;gap:10px;background:#075E54;color:#fff;margin:-16px -16px 6px;padding:12px 14px;border-radius:22px 22px 0 0;font-weight:600}
+.chat .top i{width:28px;height:28px;border-radius:50%;background:#25D366;display:block}
+.msg{max-width:84%;padding:8px 11px;border-radius:12px;background:#fff;box-shadow:0 1px 1px rgba(0,0,0,.08)}
+.msg.me{justify-self:end;background:#DCF8C6}
+.illus{position:absolute;bottom:-22px;font-size:.7rem;color:var(--muted)}
+
+/* APP */
+.app{background:radial-gradient(800px 400px at 80% 0%,rgba(19,163,95,.35),transparent 60%),var(--deep);color:#fff}
+.app .lead{color:#B9D4C6}
+.app h2 span{color:#7EE2AD}
+.phones{display:flex;justify-content:center;gap:22px;margin-top:48px;flex-wrap:wrap}
+.phones .phone{width:210px}
+.phones .phone:nth-child(2){transform:translateY(-24px)}
+.app-feats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:48px}
+.app-feats div{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:22px}
+.app-feats b{font-family:'Space Grotesk';font-size:1.05rem;display:block;margin-bottom:6px}
+.app-feats p{color:#B9D4C6;font-size:.93rem}
+.demo{font-size:.75rem;color:#8FB3A1;margin-top:18px;text-align:center}
+
+/* DELIVER */
+.deliver{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:40px}
+.deliver .card{display:flex;gap:16px;align-items:flex-start}
+.deliver .ic{width:46px;height:46px;border-radius:14px;background:var(--mint);display:grid;place-items:center;flex:none}
+.deliver .ic svg{width:22px;height:22px}
+.deliver small{display:block;font-weight:600;color:var(--green);font-size:.78rem;text-transform:uppercase;letter-spacing:.06em;margin-bottom:4px}
+
+.bonus-h{margin-top:56px}
+.bonus-h h2{color:var(--green)}
+/* LIVE */
+.live{display:grid;grid-template-columns:.9fr 1.1fr;gap:44px;align-items:center}
+.live-card{background:linear-gradient(160deg,#fff, var(--mint));border:1px solid var(--line);border-radius:28px;padding:30px;box-shadow:var(--shadow)}
+.cal{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin-top:16px;font-size:.78rem;text-align:center}
+.cal span{padding:8px 0;border-radius:8px;color:var(--muted)}
+.cal .d{background:#fff;border:1px solid var(--line);color:var(--ink)}
+.cal .on{background:var(--green);color:#fff;font-weight:700;border-color:var(--green)}
+.live-card h3{display:flex;justify-content:space-between}
+.live-card h3 em{font-style:normal;font-size:.75rem;color:var(--green);background:#fff;padding:4px 10px;border-radius:99px;border:1px solid var(--line)}
+.live ul{list-style:none;display:grid;gap:12px;margin-top:22px}
+.live li{display:flex;gap:12px}
+.live li svg{width:22px;height:22px;flex:none}
+
+/* ABOUT */
+.about{display:grid;grid-template-columns:.8fr 1.2fr;gap:48px;align-items:center}
+.about-photo{border-radius:28px;overflow:hidden;aspect-ratio:4/5;box-shadow:var(--shadow)}
+.about-photo img{width:100%;height:100%;object-fit:cover;object-position:62% 30%}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:28px}
+.stats div{background:var(--bg);border:1px solid var(--line);border-radius:16px;padding:16px}
+.stats b{font-family:'Space Grotesk';font-size:1.6rem;display:block;color:var(--green)}
+.stats span{font-size:.85rem;color:var(--muted)}
+.about p{color:var(--muted);margin-top:14px}
+
+/* PROOF */
+.prints{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px;align-items:start}
+.events{display:grid;grid-template-columns:1.4fr 1fr 1fr;grid-template-rows:1fr 1fr;gap:14px;margin-top:40px}
+.events figure{position:relative;border-radius:20px;overflow:hidden;min-height:180px}
+.events .big{grid-row:span 2}
+.events img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+.events figcaption{position:absolute;left:12px;bottom:12px;background:rgba(255,255,255,.92);font-family:'Space Grotesk';font-weight:600;font-size:.88rem;padding:6px 12px;border-radius:10px}
+@media (max-width:860px){.events{grid-template-columns:1fr 1fr;grid-template-rows:auto}.events .big{grid-column:span 2;grid-row:auto;min-height:220px}.events figure{min-height:140px}.events figure:last-child{grid-column:span 2;min-height:200px}}
+.prints figure{background:#fff;border:1px solid var(--line);border-radius:20px;padding:10px;box-shadow:var(--shadow)}
+.prints img{border-radius:12px}
+
+/* OFFER */
+.offer{max-width:620px;margin:40px auto 0;background:#fff;border:1px solid var(--line);border-radius:30px;box-shadow:0 30px 70px -30px rgba(14,40,28,.35);overflow:hidden}
+.offer-top{background:var(--deep);color:#fff;padding:26px 30px}
+.offer-top h3{font-size:1.4rem}
+.offer-top p{color:#B9D4C6;font-size:.92rem;margin-top:4px}
+.offer-body{padding:28px 30px}
+.offer ul{list-style:none;display:grid;gap:12px}
+.offer li{display:flex;gap:12px;align-items:flex-start}
+.offer li svg{width:20px;height:20px;flex:none;margin-top:2px}
+.offer li em{font-style:normal;font-size:.72rem;font-weight:700;color:#8a6a12;background:#FBF1D8;padding:2px 8px;border-radius:99px;margin-left:6px}
+.price{text-align:center;margin:28px 0 18px;padding-top:24px;border-top:1px dashed var(--line)}
+.price small{color:var(--muted)}
+.price b{display:block;font-family:'Space Grotesk';font-size:3.2rem;line-height:1.1}
+.price span{color:var(--muted);font-size:.92rem}
+.offer .btn{width:100%;justify-content:center}
+.guar{display:flex;gap:14px;align-items:center;margin-top:20px;background:var(--mint);border-radius:16px;padding:16px}
+.guar svg{width:38px;height:38px;flex:none}
+.guar p{font-size:.9rem;color:#24473a}
+
+/* FAQ */
+.faq{max-width:760px;margin:36px auto 0;display:grid;gap:12px}
+details{background:var(--bg);border:1px solid var(--line);border-radius:16px;padding:18px 22px}
+summary{cursor:pointer;font-weight:600;font-family:'Space Grotesk';font-size:1.05rem;list-style:none;display:flex;justify-content:space-between;gap:14px}
+summary::after{content:"+";color:var(--green);font-size:1.3rem;line-height:1}
+details[open] summary::after{content:"–"}
+details p{color:var(--muted);margin-top:10px}
+
+/* FINAL */
+.final{background:radial-gradient(700px 400px at 50% 0%,rgba(19,163,95,.35),transparent 60%),var(--deep);color:#fff;text-align:center}
+.final h2{margin:0 auto}
+.final .lead{color:#B9D4C6;margin:16px auto 30px}
+footer{background:var(--deep);color:#7E9A8B;text-align:center;font-size:.8rem;padding:0 20px 40px}
+
+.sticky{display:none}
+@media (max-width:860px){
+  section{padding:64px 0}
+  .hero-grid,.step,.live,.about{grid-template-columns:1fr}
+  .hero-grid{gap:56px}
+  .hero-visual{width:min(340px,86%)}
+  .f1{left:-18px}.f2{right:-16px}.f3{left:-10px}
+  .pain,.biz,.app-feats,.deliver,.prints{grid-template-columns:1fr}
+  .biz{grid-template-columns:1fr 1fr}
+  .step{padding:26px;gap:30px}
+  .step:nth-child(even) .step-vis{order:0}
+  .phones .phone{width:150px}.phones .phone:nth-child(2){transform:translateY(-14px)}
+  .phones .phone:nth-child(3){display:none}
+  .stats b{font-size:1.3rem}
+  .about-photo{max-width:360px}
+  .sticky{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:9;background:rgba(11,42,29,.94);backdrop-filter:blur(10px);border-radius:16px;padding:10px 10px 10px 16px;align-items:center;justify-content:space-between;color:#fff;box-shadow:0 18px 40px -12px rgba(0,0,0,.5)}
+  .sticky b{font-family:'Space Grotesk'}.sticky small{display:block;color:#9FC2B0;font-size:.75rem}
+  .sticky a{background:var(--green-2);color:#fff;text-decoration:none;font-weight:600;padding:12px 16px;border-radius:12px;font-size:.92rem}
+  
+}
+@media print{.sticky{display:none}body{padding:0}}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute">
+  <symbol id="ck" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#E7F6EE"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#0F6B45" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="leaf" viewBox="0 0 24 24"><path d="M12 21V11M12 11C12 6 8 4 4 4c0 5 3 7 8 7zm0 0c0-4 3-7 8-7 0 5-3 8-8 8" fill="none" stroke="#7EE2AD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+</svg>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="wrap">
+    <nav class="nav">
+      <div class="logo"><i><svg><use href="#leaf"/></svg></i>Negócios com Princípios</div>
+      <small>com Delaine Nogueira</small>
+    </nav>
+    <div class="hero-grid">
+      <div>
+        <div class="pill"><b></b>Para confeitaria, loja, salão e prestador de serviço</div>
+        <h1>Anuncie o seu negócio no Instagram em 3 passos simples e <em>seja o primeiro nome que o seu bairro lembra</em> na hora de comprar.</h1>
+        <p class="lead">O passo a passo de tráfego pago, tela por tela, para você colocar o seu anúncio no ar com pouco por dia, mesmo sem entender de tecnologia.</p>
+        <ul class="checks">
+          <li><svg><use href="#ck"/></svg>Aulas curtas, tela por tela</li>
+          <li><svg><use href="#ck"/></svg>App que monta o seu perfil</li>
+          <li><svg><use href="#ck"/></svg>Ao vivo comigo todo mês</li>
+        </ul>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-photo"><img src="img/v4/delaine-hero3.jpg" alt="Delaine Nogueira"></div>
+        <div class="float f1"><div class="ic" style="background:#E7F6EE"><svg width="20" height="20" viewBox="0 0 24 24"><path d="M3 12l5 5L21 4" fill="none" stroke="#0F6B45" stroke-width="2.6" stroke-linecap="round"/></svg></div><div><strong>Anúncio no ar</strong><span>Público: até 5 km do negócio</span></div></div>
+        <div class="float f2"><div class="ic" style="background:#25D366"><svg width="20" height="20" viewBox="0 0 24 24"><path d="M4 20l1.4-4A8 8 0 1 1 8 18.6z" fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round"/></svg></div><div><strong>Nova mensagem</strong><span>"Vi seu anúncio, ainda tem horário?"</span></div></div>
+        <div class="float f3"><div class="ic" style="background:#FBF1D8"><svg width="20" height="20" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="4" fill="none" stroke="#8a6a12" stroke-width="2"/><circle cx="12" cy="12" r="3.5" fill="none" stroke="#8a6a12" stroke-width="2"/></svg></div><div><strong>Perfil arrumado</strong><span>Bio, destaques e 9 posts</span></div></div>
+        <span class="tag">Ilustração do caminho que você aprende</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- DOR -->
+<section class="alt">
+  <div class="wrap">
+    <h2>Você não perde cliente por ser pior. Perde por não ser visto.</h2>
+    <div class="pain">
+      <div class="card"><span class="num">01</span><h3>Quem vê são sempre os mesmos</h3><p>Você posta, capricha na foto, e quem curte é família e cliente antigo. Gente nova quase não chega.</p></div>
+      <div class="card"><span class="num">02</span><h3>O mês depende de indicação</h3><p>Tem semana cheia e semana parada, e você nunca sabe qual vem. Fica difícil planejar e crescer.</p></div>
+      <div class="card"><span class="num">03</span><h3>Anunciar parece complicado</h3><p>Você até quer anunciar, mas trava nas configurações e fica com medo de colocar dinheiro e fazer errado.</p></div>
+    </div>
+    <p class="punch">Não é falta de capacidade. <span>É falta de aparecer.</span></p>
+  </div>
+</section>
+
+<div class="quote"><div class="wrap"><p>Não vence o melhor.<br><span>Vence o mais conhecido.</span></p><small>Sendo justo ou não, o cliente compra de quem ele lembra primeiro.</small></div></div>
+
+<!-- PARA QUEM -->
+<section>
+  <div class="wrap">
+    <h2>Para quem tem negócio de verdade. Não para quem quer virar especialista em marketing.</h2>
+    <div class="biz">
+      <figure><img src="img/v4/neg-cafe.jpg" alt=""><figcaption>Confeitaria e café</figcaption></figure>
+      <figure><img src="img/v4/neg-loja.jpg" alt=""><figcaption>Loja de bairro</figcaption></figure>
+      <figure><img src="img/v4/neg-salao.jpg" alt=""><figcaption>Salão e estética</figcaption></figure>
+      <figure><img src="img/v4/neg-eletricista.jpg" alt=""><figcaption>Prestador de serviço</figcaption></figure>
+      <figure><img src="img/v4/neg-costureira.jpg" alt=""><figcaption>Ateliê e costura</figcaption></figure>
+      <figure><img src="img/v4/neg-pedido.jpg" alt=""><figcaption>Vendas por encomenda</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- 3 PASSOS -->
+<section class="alt">
+  <div class="wrap">
+    <h2>O Método 3V: 3 passos simples para o seu negócio ficar conhecido.</h2>
+    <p class="lead"><b>Vitrine</b>, <b>Visibilidade</b> e <b>Venda</b>. Nessa ordem, porque anunciar antes de arrumar a vitrine é pagar para mostrar uma loja fechada.</p>
+    <div class="steps">
+      <div class="step">
+        <div>
+          <span class="n">1</span>
+          <h3>Vitrine: arrume o seu perfil</h3>
+          <p>Antes de anunciar, o seu perfil precisa mostrar em 5 segundos o que você faz, onde fica e como comprar.</p>
+          <ul>
+            <li><svg><use href="#ck"/></svg>Bio que explica e chama para o WhatsApp</li>
+            <li><svg><use href="#ck"/></svg>O produto certo para abrir a porta</li>
+            <li><svg><use href="#ck"/></svg>Os 9 primeiros posts prontos no app</li>
+          </ul>
+        </div>
+        <div class="step-vis"><div class="phone"><div class="scr"><img src="img/semear-bio.jpg" alt="App Semear: bio pronta"></div></div></div>
+      </div>
+      <div class="step">
+        <div>
+          <span class="n">2</span>
+          <h3>Visibilidade: anuncie do jeito certo</h3>
+          <p>Você começa pelo impulsionar bem feito e, quando estiver segura, passa para a campanha de mensagem. Tudo para quem mora perto, com pouco por dia.</p>
+          <ul>
+            <li><svg><use href="#ck"/></svg>Impulsionar configurado do jeito certo</li>
+            <li><svg><use href="#ck"/></svg>Campanha de mensagem no Gerenciador</li>
+            <li><svg><use href="#ck"/></svg>Público da sua região, a partir de R$ 10 por dia</li>
+          </ul>
+        </div>
+        <div class="step-vis">
+          <div class="ui">
+            <div class="ui-h">Seu primeiro anúncio <em>● Ativo</em></div>
+            <div class="row"><span>Objetivo</span><b>Mensagens no WhatsApp</b></div>
+            <div class="row"><span>Público</span><b>Até 5 km do negócio</b></div>
+            <div class="row"><span>Investimento</span><b>R$ 10 por dia</b></div>
+            <div class="row"><span>Duração</span><b>7 dias</b></div>
+            <div class="bar"><i></i></div>
+          </div>
+          <span class="illus">Ilustração</span>
+        </div>
+      </div>
+      <div class="step">
+        <div>
+          <span class="n">3</span>
+          <h3>Venda: atenda até virar cliente</h3>
+          <p>Mensagem chegando não é venda. Você aprende o que responder, como falar o preço sem pedir desculpa e o que dizer quando o cliente diz "vou pensar".</p>
+          <ul>
+            <li><svg><use href="#ck"/></svg>Mensagens prontas para copiar</li>
+            <li><svg><use href="#ck"/></svg>Como responder o "vou pensar"</li>
+            <li><svg><use href="#ck"/></svg>Cliente que volta e indica</li>
+          </ul>
+        </div>
+        <div class="step-vis">
+          <div class="chat">
+            <div class="top"><i></i>Cliente novo</div>
+            <div class="msg">Oi! Vi seu anúncio. Quanto fica o bolo de 2 kg?</div>
+            <div class="msg me">Oi, que bom que chamou! O de 2 kg serve 20 pessoas e fica R$ 150. Para qual data você precisa?</div>
+            <div class="msg">Sábado que vem 🎉</div>
+            <div class="msg me">Tenho sábado sim! Te mando os sabores?</div>
+          </div>
+          <span class="illus">Ilustração</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- APP -->
+<section class="app">
+  <div class="wrap center">
+    <h2>Você responde algumas perguntas. <span>O app Semear monta o seu perfil.</span></h2>
+    <p class="lead">Incluído no curso. Você escolhe o seu tipo de negócio, preenche no celular e sai com a vitrine pronta para anunciar.</p>
+    <div class="phones">
+      <div class="phone"><div class="scr"><img src="img/semear-inicio.jpg" alt=""></div></div>
+      <div class="phone"><div class="scr"><img src="img/semear-posts.jpg" alt=""></div></div>
+      <div class="phone"><div class="scr"><img src="img/semear-bio.jpg" alt=""></div></div>
+    </div>
+    <div class="app-feats">
+      <div><b>Bio pronta</b><p>Com botão de copiar e colar direto no Instagram.</p></div>
+      <div><b>9 posts com arte</b><p>Na ordem certa de postar, para quem chega entender o que você vende.</p></div>
+      <div><b>Oferta e primeiro anúncio</b><p>O que anunciar primeiro e com quanto começar.</p></div>
+    </div>
+    <p class="demo">Telas reais do app em modo de demonstração.</p>
+  </div>
+</section>
+
+<!-- O QUE RECEBE -->
+<section>
+  <div class="wrap">
+    <h2>Tudo o que você precisa para anunciar sozinha, sem depender de agência.</h2>
+    <div class="deliver">
+      <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h10" stroke="#0F6B45" stroke-width="2.2" stroke-linecap="round"/></svg></div><div><small>O curso</small><h3>Aulas do Método 3V</h3><p>Vitrine, visibilidade e venda, tela por tela, para assistir no celular e fazer junto.</p></div></div>
+      <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H8l-4 4z" fill="none" stroke="#0F6B45" stroke-width="2.2" stroke-linejoin="round"/></svg></div><div><small>O curso</small><h3>Anúncios e mensagens prontos</h3><p>Modelos para copiar e adaptar ao seu negócio, do anúncio à resposta no WhatsApp.</p></div></div>
+    </div>
+    <div class="bonus-h"><h2>Pensa que acabou?</h2><p class="lead">Você ainda leva:</p></div>
+    <div class="deliver">
+      <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><rect x="7" y="2.5" width="10" height="19" rx="2.5" fill="none" stroke="#0F6B45" stroke-width="2.2"/></svg></div><div><small>Bônus 1</small><h3>App Semear</h3><p>Monta a bio, os 9 posts e a sua primeira oferta.</p></div></div>
+      <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="#0F6B45" stroke-width="2.2"/><path d="M10 8.5l5 3.5-5 3.5z" fill="#0F6B45"/></svg></div><div><small>Bônus 2</small><h3>Encontro ao vivo mensal</h3><p>Toda última quinta-feira do mês, para tirar dúvida e ajustar o seu anúncio.</p></div></div>
+      <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3l1.8 4.7L18.5 9.5l-4.7 1.8L12 16l-1.8-4.7L5.5 9.5l4.7-1.8z" fill="none" stroke="#0F6B45" stroke-width="2" stroke-linejoin="round"/><path d="M18 15l.8 2.2L21 18l-2.2.8L18 21l-.8-2.2L15 18l2.2-.8z" fill="#0F6B45"/></svg></div><div><small>Bônus 3</small><h3>Anúncios com inteligência artificial</h3><p>Texto e imagem do anúncio prontos em minutos, sem precisar de designer.</p></div></div>
+      <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="3" fill="none" stroke="#0F6B45" stroke-width="2.2"/><path d="M3 9h18" stroke="#0F6B45" stroke-width="2.2"/></svg></div><div><small>Bônus 4</small><h3>Sua página com inteligência artificial</h3><p>Um site simples do seu negócio, na linguagem do seu cliente.</p></div></div>
+      <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2" fill="none" stroke="#0F6B45" stroke-width="2.2"/><path d="M8 8h8M8 12h8M8 16h5" stroke="#0F6B45" stroke-width="2"/></svg></div><div><small>Bônus 5</small><h3>Planilha do anúncio</h3><p>Para saber quanto gastou e quantas pessoas chamaram.</p></div></div>
+      <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.5-7 10-7 10z" fill="none" stroke="#0F6B45" stroke-width="2.2" stroke-linejoin="round"/></svg></div><div><small>Bônus 6</small><h3>Aula Crenças e Princípios</h3><p>Vender e cobrar o preço justo, sem culpa.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- AO VIVO -->
+<section class="alt">
+  <div class="wrap live">
+    <div class="live-card">
+      <h3>Encontro ao vivo <em>online</em></h3>
+      <div class="cal">
+        <span>D</span><span>S</span><span>T</span><span>Q</span><span>Q</span><span>S</span><span>S</span>
+        <span class="d">22</span><span class="d">23</span><span class="d">24</span><span class="d">25</span><span class="d on">26</span><span class="d">27</span><span class="d">28</span>
+      </div>
+      <p style="margin-top:14px;color:var(--muted);font-size:.9rem">Última quinta-feira de cada mês</p>
+    </div>
+    <div>
+      <h2>Você não fica sozinha depois de comprar.</h2>
+      <p class="lead">Todo mês tem encontro ao vivo comigo. É onde você tira as dúvidas e eu olho o seu anúncio com você.</p>
+      <ul>
+        <li><svg><use href="#ck"/></svg><span><b>Tira-dúvidas ao vivo</b> sobre o que travou no mês</span></li>
+        <li><svg><use href="#ck"/></svg><span><b>Correção de anúncio</b> de alunos na hora, para todos aprenderem</span></li>
+        <li><svg><use href="#ck"/></svg><span><b>Online</b>, de onde você estiver, pelo celular ou computador</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- EVENTOS -->
+<section>
+  <div class="wrap">
+    <h2>Todas essas pessoas chegaram por anúncio patrocinado. Com o mesmo método que você vai aprender.</h2>
+    <p class="lead">Na Brain Pro, empresa em que sou sócia e cuido do marketing, enchemos as turmas presenciais de Recife, São Paulo, Curitiba e Rio de Janeiro com anúncios no Instagram. O método é o mesmo, seja um bolo, um serviço ou um curso: o que muda é o valor, não o caminho.</p>
+    <div class="events">
+      <figure class="big"><img src="img/v4/ev-sp.jpg" alt="Turma em São Paulo"><figcaption>São Paulo</figcaption></figure>
+      <figure><img src="img/v4/ev-pe.jpg" alt="Turma em Recife"><figcaption>Recife</figcaption></figure>
+      <figure><img src="img/v4/ev-pr.jpg" alt="Turma em Curitiba"><figcaption>Curitiba</figcaption></figure>
+      <figure><img src="img/v4/ev-rj.jpg" alt="Turma no Rio de Janeiro"><figcaption>Rio de Janeiro</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- PROVA -->
+<section class="alt">
+  <div class="wrap center">
+    <h2>O que dizem quem aprendeu comigo.</h2>
+    <div class="prints">
+      <figure><img src="img/print-grupo-1.jpg" alt="Mensagem de aluna"></figure>
+      <figure><img src="img/print-grupo-2.jpg" alt="Mensagem de aluna"></figure>
+      <figure><img src="img/print-grupo-3.jpg" alt="Mensagem de aluna"></figure>
+    </div>
+  </div>
+</section>
+
+<!-- QUEM É -->
+<section>
+  <div class="wrap about">
+    <div class="about-photo"><img src="img/v4/delaine-notebook2.jpg" alt="Delaine Nogueira"></div>
+    <div>
+      <h2>Quem vai te ensinar já esteve do seu lado do balcão.</h2>
+      <p>Eu sou a Delaine Nogueira. Antes do digital, tive negócio pequeno: vendi bolo, fiz curso de confeitaria, rodei de Uber. Sei o que é depender de indicação e não saber de onde vem o próximo cliente.</p>
+      <p>Há 7 anos trabalho com marketing e anúncios. Hoje ensino donos de negócio a anunciar pela DN Marketing e pelo Instituto Luminar, do jeito simples que eu queria ter aprendido.</p>
+      <div class="stats">
+        <div><b>7 anos</b><span>com anúncios</span></div>
+        <div><b>+R$ 5 mi</b><span>em anúncios gerenciados</span></div>
+        <div><b>Palestras</b><span>e turmas em RJ, SP, PR e PE</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="alt">
+  <div class="wrap center">
+    <h2>Perguntas frequentes</h2>
+    <div class="faq" style="text-align:left">
+      <details><summary>Não entendo nada de tecnologia. Vou conseguir?</summary><p>Sim. As aulas mostram tela por tela, no celular. E se travar, você leva a dúvida para o encontro ao vivo do mês.</p></details>
+      <details><summary>Quanto vou gastar em anúncio, além do curso?</summary><p>Você pode começar com R$ 10 por dia, por 7 dias. Você decide o valor e pode pausar quando quiser.</p></details>
+      <details><summary>Eu já impulsiono. Isso serve para mim?</summary><p>Serve. O impulsionar é um ótimo começo quando é feito do jeito certo. Aqui você acerta a configuração e, quando quiser, dá o próximo passo para a campanha de mensagem.</p></details>
+      <details><summary>O que acontece depois que eu pagar?</summary><p>Você recebe o acesso por e-mail, começa pela primeira aula e já pode abrir o app Semear para montar o seu perfil.</p></details>
+    </div>
+  </div>
+</section>
+
+<div class="quote"><div class="wrap"><p>Se a pessoa não te conhece,<br><span>como ela vai comprar de você?</span></p></div></div>
+
+<!-- OFERTA -->
+<section id="oferta">
+  <div class="wrap center">
+    <h2>Seu negócio é bom. Agora ele precisa ser encontrado.</h2>
+    <p class="lead">Comece hoje e coloque o seu primeiro anúncio no ar ainda esta semana.</p>
+    <div class="offer" style="text-align:left">
+      <div class="offer-top"><h3>Negócios com Princípios</h3><p>Método 3V: vitrine, visibilidade e venda</p></div>
+      <div class="offer-body">
+        <ul>
+          <li><svg><use href="#ck"/></svg><span><b>Aulas do Método 3V</b>: vitrine, visibilidade e venda</span></li>
+          <li><svg><use href="#ck"/></svg><span><b>App Semear</b> para montar o seu perfil<em>bônus</em></span></li>
+          <li><svg><use href="#ck"/></svg><span><b>Encontro ao vivo</b> toda última quinta-feira do mês<em>bônus</em></span></li>
+          <li><svg><use href="#ck"/></svg><span><b>Anúncios e mensagens prontos</b> para copiar</span></li>
+          <li><svg><use href="#ck"/></svg><span><b>Anúncios com inteligência artificial</b>: texto e imagem prontos em minutos<em>bônus</em></span></li>
+          <li><svg><use href="#ck"/></svg><span><b>Sua página com inteligência artificial</b>, na linguagem do seu cliente<em>bônus</em></span></li>
+          <li><svg><use href="#ck"/></svg><span><b>Planilha</b> para saber quanto gastou e quantos chamaram<em>bônus</em></span></li>
+          <li><svg><use href="#ck"/></svg><span><b>Aula Crenças e Princípios</b>: vender e cobrar sem culpa<em>bônus</em></span></li>
+        </ul>
+        <div class="price">
+          <small>12x de</small>
+          <b>R$ 19,90</b>
+          <span>ou R$ 197 à vista</span>
+        </div>
+        <a class="btn" href="#checkout">Quero aprender a anunciar <svg><use href="#arrow"/></svg></a>
+        <div class="guar">
+          <svg viewBox="0 0 24 24"><path d="M12 2l8 3v6c0 5-3.5 9-8 11-4.5-2-8-6-8-11V5z" fill="#0F6B45"/><path d="M8 12l3 3 5-6" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <p><b>Garantia de 30 dias.</b> Assista, aplique e, se não for para você, peça o reembolso. Sem pergunta.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>Negócios com Princípios · Delaine Nogueira · Instituto Luminar</footer>
+</body>
+</html>
