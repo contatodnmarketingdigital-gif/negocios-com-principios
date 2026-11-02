@@ -298,6 +298,37 @@ footer{background:#031009;color:#8EA799;border-top:1px solid rgba(217,182,106,.1
 .bonus-grid img{width:100%;display:block}
 .bonus-grid figcaption{padding:10px 12px;font-size:.88rem;color:#EADCB8;font-weight:600}
 @media (max-width:860px){.bonus-grid{grid-template-columns:1fr 1fr;gap:12px}}
+
+/* ===== CLEAN ===== */
+.hero::before{display:none}
+.card,.alt .card,.step,.pra-voce li,details,.stats div,.prints figure,.live-card,.g-box{box-shadow:none;backdrop-filter:none;background:rgba(255,255,255,.035)}
+.offer{box-shadow:0 30px 60px -40px rgba(0,0,0,.9)}
+.capa{width:min(240px,80%);box-shadow:0 24px 50px -30px rgba(0,0,0,.9)}
+.step{padding:28px;gap:26px}
+.step ul{display:none}
+.bonus-grid{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 2px 14px;-webkit-overflow-scrolling:touch;scrollbar-width:thin}
+.bonus-grid figure{flex:0 0 190px;scroll-snap-align:start;box-shadow:none}
+.bonus-grid figcaption{font-size:.82rem}
+.carrossel{display:flex!important;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:12px}
+.carrossel figure{flex:0 0 260px;scroll-snap-align:start;box-shadow:none}
+.dica-scroll{font-size:.8rem;color:var(--muted);margin-top:6px}
+section{padding:72px 0}
+@media (max-width:860px){.bonus-grid figure{flex-basis:150px}.carrossel figure{flex-basis:230px}section{padding:56px 0}}
+
+/* ===== ALTERNÂNCIA CLARA (creme) × VERDE ===== */
+.alt{background:#F6F1E4!important;border-color:rgba(201,160,74,.25);color:#1B2A21}
+.alt h2,.alt h3,.alt summary{color:#0B2A1D}
+.alt .lead,.alt p,.alt .card p,.alt .step p,.alt .live li,.alt .live span{color:#4E5E54}
+.alt .card,.alt .step,.alt .pra-voce li,.alt .live-card,.alt .g-box,.alt .prints figure,.alt details{background:#fff;border:1px solid rgba(15,107,69,.12);box-shadow:0 18px 40px -30px rgba(11,42,29,.35)}
+.alt .card .num{background:#F3E7C6;color:#8A6416}
+.alt .punch{color:#0B2A1D}.alt .punch span{color:#9A7424}
+.alt .step .n{background:linear-gradient(135deg,#C99A3C,#8A6416);-webkit-background-clip:text;background-clip:text;color:transparent}
+.alt .live-card h3 em{color:#8A6416;border-color:rgba(201,160,74,.4)}
+.alt .cal .d{background:#FBF8F0;border-color:rgba(15,107,69,.12);color:#1B2A21}
+.alt .cal span{color:#6B7B71}
+.alt .g-selo{box-shadow:0 0 0 8px #fff,0 0 0 10px #D9B66A,0 20px 40px -15px rgba(201,160,74,.5)}
+.alt .capa{border-color:rgba(201,160,74,.5)}
+.alt .dica-scroll{color:#6B7B71}
 </style>
 </head>
 <body>
@@ -330,9 +361,6 @@ footer{background:#031009;color:#8EA799;border-top:1px solid rgba(217,182,106,.1
       <div class="hero-visual">
         <div class="hero-photo"><img src="img/v4/delaine-hero4.jpg" alt="Delaine Nogueira"></div>
         <div class="float f1"><div class="ic" style="background:#E7F6EE"><svg width="20" height="20" viewBox="0 0 24 24"><path d="M3 12l5 5L21 4" fill="none" stroke="#0F6B45" stroke-width="2.6" stroke-linecap="round"/></svg></div><div><strong>Anúncio no ar</strong><span>Público: até 5 km do negócio</span></div></div>
-        <div class="float f2"><div class="ic" style="background:#25D366"><svg width="20" height="20" viewBox="0 0 24 24"><path d="M4 20l1.4-4A8 8 0 1 1 8 18.6z" fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round"/></svg></div><div><strong>Nova mensagem</strong><span>"Vi seu anúncio, ainda tem horário?"</span></div></div>
-        <div class="float f3"><div class="ic" style="background:#FBF1D8"><svg width="20" height="20" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="4" fill="none" stroke="#8a6a12" stroke-width="2"/><circle cx="12" cy="12" r="3.5" fill="none" stroke="#8a6a12" stroke-width="2"/></svg></div><div><strong>Perfil arrumado</strong><span>Bio, destaques e 9 posts</span></div></div>
-        <span class="tag">Ilustração do caminho que você aprende</span>
       </div>
     </div>
   </div>
@@ -363,14 +391,7 @@ footer{background:#031009;color:#8EA799;border-top:1px solid rgba(217,182,106,.1
       <li><svg><use href="#ck"/></svg>Quer anunciar, mas tem medo de errar e perder dinheiro</li>
       <li><svg><use href="#ck"/></svg>Não tem tempo para virar especialista em marketing</li>
     </ul>
-    <div class="biz">
-      <figure><img src="img/v4/neg-cafe.jpg" alt=""><figcaption>Confeitaria e café</figcaption></figure>
-      <figure><img src="img/v4/neg-loja.jpg" alt=""><figcaption>Loja de bairro</figcaption></figure>
-      <figure><img src="img/v4/neg-salao.jpg" alt=""><figcaption>Salão e estética</figcaption></figure>
-      <figure><img src="img/v4/neg-eletricista.jpg" alt=""><figcaption>Prestador de serviço</figcaption></figure>
-      <figure><img src="img/v4/neg-costureira.jpg" alt=""><figcaption>Ateliê e costura</figcaption></figure>
-      <figure><img src="img/v4/neg-pedido.jpg" alt=""><figcaption>Vendas por encomenda</figcaption></figure>
-    </div>
+    
   </div>
 </section>
 
@@ -423,25 +444,6 @@ footer{background:#031009;color:#8EA799;border-top:1px solid rgba(217,182,106,.1
   </div>
 </section>
 
-<!-- APP -->
-<section class="app">
-  <div class="wrap center">
-    <h2>Você responde algumas perguntas. <span>O app Semear monta o seu perfil.</span></h2>
-    <p class="lead">Incluído no curso. Você escolhe o seu tipo de negócio, preenche no celular e sai com a vitrine pronta para anunciar.</p>
-    <div class="phones">
-      <div class="phone"><div class="scr"><img src="img/semear-inicio.jpg" alt=""></div></div>
-      <div class="phone"><div class="scr"><img src="img/semear-posts.jpg" alt=""></div></div>
-      <div class="phone"><div class="scr"><img src="img/semear-bio.jpg" alt=""></div></div>
-    </div>
-    <div class="app-feats">
-      <div><b>Bio pronta</b><p>Com botão de copiar e colar direto no Instagram.</p></div>
-      <div><b>9 posts com arte</b><p>Na ordem certa de postar, para quem chega entender o que você vende.</p></div>
-      <div><b>Oferta e primeiro anúncio</b><p>O que anunciar primeiro e com quanto começar.</p></div>
-    </div>
-    <p class="demo">Telas reais do app em modo de demonstração.</p>
-  </div>
-</section>
-
 <!-- O QUE RECEBE -->
 <section>
   <div class="wrap">
@@ -452,6 +454,7 @@ footer{background:#031009;color:#8EA799;border-top:1px solid rgba(217,182,106,.1
       <figure><img src="img/capas/anuncios-prontos.jpg" alt="Anúncios prontos para copiar" loading="lazy"><figcaption>Anúncios prontos para copiar</figcaption></figure>
       <figure><img src="img/capas/mensagens-prontas.jpg" alt="Mensagens prontas para o WhatsApp" loading="lazy"><figcaption>Mensagens prontas para o WhatsApp</figcaption></figure>
     </div>
+    <p class="dica-scroll">Arraste para o lado →</p>
     <div class="bonus-h"><h2>Pensa que acabou? <span class="script">você ainda leva</span></h2></div>
     <div class="bonus-grid">
       <figure><img src="img/capas/app-semear.jpg" alt="Bônus 1 · App Semear" loading="lazy"><figcaption>Bônus 1 · App Semear</figcaption></figure>
@@ -505,7 +508,7 @@ footer{background:#031009;color:#8EA799;border-top:1px solid rgba(217,182,106,.1
 <section class="alt">
   <div class="wrap center">
     <h2>O que dizem quem aprendeu comigo.</h2>
-    <div class="prints">
+    <div class="prints carrossel">
       <figure><img src="img/print-grupo-1.jpg" alt="Mensagem de aluna"></figure>
       <figure><img src="img/print-grupo-2.jpg" alt="Mensagem de aluna"></figure>
       <figure><img src="img/print-grupo-3.jpg" alt="Mensagem de aluna"></figure>
