@@ -73,6 +73,12 @@ section{padding:84px 0}
 .pra-voce svg{width:20px;height:20px;flex:none;margin-top:2px}
 @media (max-width:860px){.pra-voce{grid-template-columns:1fr}}
 .selos{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 16px;margin-top:14px;font-size:.82rem;color:var(--muted);font-weight:500}
+.garantia{padding:20px 0 84px}
+.g-box{display:grid;grid-template-columns:auto 1fr;gap:36px;align-items:center;background:linear-gradient(160deg,#fff,var(--mint));border:1px solid var(--line);border-radius:28px;padding:36px;box-shadow:var(--shadow);max-width:900px;margin:0 auto}
+.g-selo{width:150px;height:150px;border-radius:50%;background:radial-gradient(circle at 30% 30%,#1BB56C,#0F6B45);color:#fff;display:grid;place-items:center;text-align:center;box-shadow:0 0 0 8px #fff,0 0 0 10px #D8A93B,0 20px 40px -15px rgba(15,107,69,.6)}
+.g-selo b{font-family:'Space Grotesk';font-size:3.4rem;line-height:.9;display:block}
+.g-selo span{font-size:.8rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;line-height:1.2}
+@media (max-width:860px){.g-box{grid-template-columns:1fr;text-align:center;justify-items:center;padding:28px}}
 /* QUOTE */
 .quote{background:var(--deep);color:#fff;padding:70px 0;text-align:center;position:relative;overflow:hidden}
 .quote::before{content:"";position:absolute;inset:0;background:radial-gradient(600px 300px at 50% 0%,rgba(19,163,95,.35),transparent 70%)}
@@ -461,29 +467,16 @@ footer{background:var(--deep);color:#7E9A8B;text-align:center;font-size:.8rem;pa
 <!-- QUEM É -->
 <section>
   <div class="wrap about">
-    <div class="about-photo"><img src="img/v4/delaine-sobre.jpg" alt="Delaine Nogueira"></div>
+    <div class="about-photo"><img src="img/v4/delaine-sobre2.jpg" alt="Delaine Nogueira"></div>
     <div>
       <h2>Quem vai te ensinar já esteve do seu lado do balcão.</h2>
       <p>Eu sou a Delaine Nogueira. Antes do digital, tive negócio pequeno: vendi bolo, fiz curso de confeitaria, rodei de Uber. Sei o que é depender de indicação e não saber de onde vem o próximo cliente.</p>
-      <p>Há 7 anos trabalho com marketing e anúncios. Hoje ensino donos de negócio a anunciar pela DN Marketing e pelo Instituto Luminar, do jeito simples que eu queria ter aprendido.</p>
+      <p>Há 7 anos trabalho com marketing e anúncios. Hoje ensino donos de negócio a anunciar pelo Instituto Luminar, do jeito simples que eu queria ter aprendido.</p>
       <div class="stats">
         <div><b>7 anos</b><span>com anúncios</span></div>
         <div><b>+R$ 5 mi</b><span>em anúncios gerenciados</span></div>
         <div><b>Palestras</b><span>e turmas em RJ, SP, PR e PE</span></div>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- FAQ -->
-<section class="alt">
-  <div class="wrap center">
-    <h2>Perguntas frequentes</h2>
-    <div class="faq" style="text-align:left">
-      <details><summary>Não entendo nada de tecnologia. Vou conseguir?</summary><p>Sim. As aulas mostram tela por tela, no celular. E se travar, você leva a dúvida para o encontro ao vivo do mês.</p></details>
-      <details><summary>Quanto vou gastar em anúncio, além do curso?</summary><p>Você pode começar com R$ 10 por dia, por 7 dias. Você decide o valor e pode pausar quando quiser.</p></details>
-      <details><summary>Eu já impulsiono. Isso serve para mim?</summary><p>Serve. O impulsionar é um ótimo começo quando é feito do jeito certo. Aqui você acerta a configuração e, quando quiser, dá o próximo passo para a campanha de mensagem.</p></details>
-      <details><summary>O que acontece depois que eu pagar?</summary><p>Você recebe o acesso por e-mail, começa pela primeira aula e já pode abrir o app Semear para montar o seu perfil.</p></details>
     </div>
   </div>
 </section>
@@ -515,11 +508,34 @@ footer{background:var(--deep);color:#7E9A8B;text-align:center;font-size:.8rem;pa
         </div>
         <a class="btn" href="https://payfast.greenn.com.br/180747/offer/58h6DY">Quero aprender a anunciar <svg><use href="#arrow"/></svg></a>
         <div class="selos"><span>⚡ Acesso imediato</span><span>🔒 Compra segura</span><span>✓ Garantia de 30 dias</span></div>
-        <div class="guar">
-          <svg viewBox="0 0 24 24"><path d="M12 2l8 3v6c0 5-3.5 9-8 11-4.5-2-8-6-8-11V5z" fill="#0F6B45"/><path d="M8 12l3 3 5-6" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          <p><b>Garantia de 30 dias.</b> Assista, aplique e, se não for para você, peça o reembolso. Sem pergunta.</p>
-        </div>
+</div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- GARANTIA -->
+<section class="garantia">
+  <div class="wrap">
+    <div class="g-box">
+      <div class="g-selo"><b>30</b><span>dias de<br>garantia</span></div>
+      <div>
+        <h2>Risco zero para você começar.</h2>
+        <p class="lead">Entre, assista às aulas e coloque o seu primeiro anúncio no ar. Se em 30 dias você achar que não é para você, é só pedir e devolvemos todo o valor. Sem pergunta e sem burocracia.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="alt">
+  <div class="wrap center">
+    <h2>Perguntas frequentes</h2>
+    <div class="faq" style="text-align:left">
+      <details><summary>Não entendo nada de tecnologia. Vou conseguir?</summary><p>Sim. As aulas mostram tela por tela, no celular. E se travar, você leva a dúvida para o encontro ao vivo do mês.</p></details>
+      <details><summary>Quanto vou gastar em anúncio, além do curso?</summary><p>Você pode começar com R$ 10 por dia, por 7 dias. Você decide o valor e pode pausar quando quiser.</p></details>
+      <details><summary>Eu já impulsiono. Isso serve para mim?</summary><p>Serve. O impulsionar é um ótimo começo quando é feito do jeito certo. Aqui você acerta a configuração e, quando quiser, dá o próximo passo para a campanha de mensagem.</p></details>
+      <details><summary>O que acontece depois que eu pagar?</summary><p>Você recebe o acesso por e-mail, começa pela primeira aula e já pode abrir o app Semear para montar o seu perfil.</p></details>
     </div>
   </div>
 </section>
