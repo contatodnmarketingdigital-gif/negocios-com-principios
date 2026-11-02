@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Negócios com Princípios Prosperam · Delaine Nogueira</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&family=Cinzel:wght@500;600&family=Great+Vibes&display=swap" rel="stylesheet">
 <style>
 :root{
   --bg:#F6F7F4; --white:#fff; --ink:#0E1A14; --muted:#5B6B62; --line:#E3E8E2;
@@ -73,7 +73,7 @@ section{padding:84px 0}
 .pra-voce svg{width:20px;height:20px;flex:none;margin-top:2px}
 @media (max-width:860px){.pra-voce{grid-template-columns:1fr}}
 .selos{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 16px;margin-top:14px;font-size:.82rem;color:var(--muted);font-weight:500}
-.garantia{padding:20px 0 84px}
+.garantia{padding:70px 0}
 .g-box{display:grid;grid-template-columns:auto 1fr;gap:36px;align-items:center;background:linear-gradient(160deg,#fff,var(--mint));border:1px solid var(--line);border-radius:28px;padding:36px;box-shadow:var(--shadow);max-width:900px;margin:0 auto}
 .g-selo{width:150px;height:150px;border-radius:50%;background:radial-gradient(circle at 30% 30%,#1BB56C,#0F6B45);color:#fff;display:grid;place-items:center;text-align:center;box-shadow:0 0 0 8px #fff,0 0 0 10px #D8A93B,0 20px 40px -15px rgba(15,107,69,.6)}
 .g-selo b{font-family:'Space Grotesk';font-size:3.4rem;line-height:.9;display:block}
@@ -232,6 +232,72 @@ footer{background:var(--deep);color:#7E9A8B;text-align:center;font-size:.8rem;pa
   
 }
 @media print{.sticky{display:none}body{padding:0}}
+
+/* ===== TEMA VERDE-ESCURO PREMIUM (desenho aprovado em 02/11) ===== */
+:root{--bg:#06190F;--white:#0A2418;--ink:#F4ECDA;--muted:#B4C8BC;--line:rgba(216,183,106,.22);--green:#E2C47E;--green-2:#C9A04A;--mint:rgba(226,196,126,.10);--deep:#031009;--gold:#D9B66A;--shadow:0 30px 70px -30px rgba(0,0,0,.8)}
+body{background:radial-gradient(900px 600px at 85% 0%,rgba(24,120,80,.35),transparent 60%),radial-gradient(700px 500px at 0% 40%,rgba(217,182,106,.10),transparent 60%),#06190F;color:var(--ink)}
+h1,h2{font-family:'Playfair Display',serif;font-weight:700;letter-spacing:-.01em;color:#F7EFDD}
+h3{color:#F7EFDD}
+.lead,.card p,.step p,.about p,details p{color:var(--muted)}
+section{background:transparent}
+.alt{background:radial-gradient(700px 360px at 15% 0%,rgba(217,182,106,.10),transparent 60%),linear-gradient(180deg,#0F3B29,#0B3022);border-top:1px solid rgba(217,182,106,.28);border-bottom:1px solid rgba(217,182,106,.28);box-shadow:inset 0 1px 0 rgba(255,255,255,.04)}
+section:not(.alt):not(.app):not(.final){background:#06190F}
+.hero{background:radial-gradient(800px 500px at 80% 20%,rgba(30,140,95,.35),transparent 60%),radial-gradient(500px 400px at 0% 100%,rgba(217,182,106,.14),transparent 60%),transparent}
+.hero::before{background-image:linear-gradient(rgba(217,182,106,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(217,182,106,.08) 1px,transparent 1px);opacity:.7}
+.logo{color:#F4ECDA;font-family:'Cinzel',serif;letter-spacing:.06em;font-size:.95rem}
+.logo i{background:linear-gradient(135deg,#1C7A52,#0B3A27);border:1px solid rgba(217,182,106,.45)}
+.nav small{color:var(--muted)}
+.pill{background:rgba(255,255,255,.05);border-color:rgba(217,182,106,.35);color:#EADCB8}
+.pill b{background:#E2C47E;box-shadow:0 0 0 4px rgba(226,196,126,.2)}
+.hero h1 em,.step .n{background:linear-gradient(135deg,#F3DFA6,#C9A04A);-webkit-background-clip:text;background-clip:text;color:transparent}
+.kill{color:#E2C47E}
+.checks li{color:#EADCB8}
+.btn{background:linear-gradient(135deg,#F1D998,#C99A3C);color:#1C1404;box-shadow:0 14px 34px -12px rgba(217,182,106,.7),inset 0 1px 0 rgba(255,255,255,.5)}
+.hero-photo{border:1px solid rgba(217,182,106,.35);box-shadow:0 0 0 6px rgba(217,182,106,.08),var(--shadow)}
+.float{background:rgba(8,32,22,.78);border:1px solid rgba(217,182,106,.35);color:#F4ECDA}
+.float span{color:var(--muted)}
+.tag,.trust,.demo,.illus{color:var(--muted)}
+.card,.alt .card,.step,.pra-voce li,details,.stats div,.prints figure,.live-card,.g-box{background:linear-gradient(160deg,rgba(255,255,255,.06),rgba(255,255,255,.02));border:1px solid rgba(217,182,106,.22);backdrop-filter:blur(8px);box-shadow:0 20px 50px -30px rgba(0,0,0,.8)}
+.card .num{background:rgba(226,196,126,.12);color:#E2C47E}
+.punch{color:#F4ECDA}.punch span{color:#E2C47E}
+.deliver .ic{background:rgba(226,196,126,.12)}
+.deliver .ic svg *{stroke:#E2C47E}
+.deliver small,.bonus-h h2{color:#E2C47E}
+svg use{color:#E2C47E}
+.biz figcaption{background:rgba(3,16,9,.8);border:1px solid rgba(217,182,106,.35)}
+.biz figure,.events figure{border:1px solid rgba(217,182,106,.25)}
+.events figcaption{background:rgba(3,16,9,.85);color:#F4ECDA;border:1px solid rgba(217,182,106,.35)}
+.step-vis::before{background:radial-gradient(circle,rgba(217,182,106,.22),transparent 70%)}
+.capa{position:relative;width:min(300px,100%);border-radius:22px;overflow:hidden;border:1px solid rgba(217,182,106,.45);box-shadow:0 0 0 6px rgba(217,182,106,.07),0 30px 60px -25px rgba(0,0,0,.9)}
+.capa img{width:100%;display:block}
+.app{background:radial-gradient(800px 400px at 80% 0%,rgba(30,140,95,.4),transparent 60%),#031009}
+.app h2 span{color:#E2C47E}
+.app-feats div{border-color:rgba(217,182,106,.25)}
+.live-card h3 em{background:transparent;color:#E2C47E;border-color:rgba(217,182,106,.35)}
+.cal .d{background:rgba(255,255,255,.04);border-color:rgba(217,182,106,.2);color:#F4ECDA}
+.cal .on{background:linear-gradient(135deg,#F1D998,#C99A3C);color:#1C1404;border-color:#C99A3C}
+.stats b{color:#E2C47E}
+.quote{background:linear-gradient(180deg,#031009,#06190F);border-top:1px solid rgba(217,182,106,.2);border-bottom:1px solid rgba(217,182,106,.2)}
+.quote p{font-family:'Playfair Display',serif}
+.quote span{color:#E2C47E}
+.offer{background:linear-gradient(160deg,rgba(255,255,255,.07),rgba(255,255,255,.02));border:1px solid rgba(217,182,106,.4);box-shadow:0 0 0 6px rgba(217,182,106,.06),var(--shadow)}
+.offer-top{background:linear-gradient(135deg,#0E3C29,#06190F);border-bottom:1px solid rgba(217,182,106,.3)}
+.offer-top h3{font-family:'Playfair Display',serif;color:#F3DFA6}
+.offer li{color:#EFE5CF}
+.offer li em{background:rgba(226,196,126,.15);color:#F3DFA6}
+.price{border-top-color:rgba(217,182,106,.3)}
+.price b{color:#F7EFDD}
+.selos{color:var(--muted)}
+.g-selo{background:radial-gradient(circle at 30% 30%,#F1D998,#B8892F);color:#1C1404;box-shadow:0 0 0 8px rgba(6,25,15,1),0 0 0 10px #D9B66A,0 20px 40px -15px rgba(217,182,106,.6)}
+summary{color:#F4ECDA}summary::after{color:#E2C47E}
+footer{background:#031009;color:#8EA799;border-top:1px solid rgba(217,182,106,.15);padding-top:30px}
+.ui{color:#0E1A14}
+.script{font-family:'Great Vibes',cursive;color:#E2C47E;font-weight:400;font-size:1.35em;line-height:1}
+.bonus-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}
+.bonus-grid figure{border-radius:18px;overflow:hidden;border:1px solid rgba(217,182,106,.35);box-shadow:0 24px 50px -28px rgba(0,0,0,.9);background:#031009}
+.bonus-grid img{width:100%;display:block}
+.bonus-grid figcaption{padding:10px 12px;font-size:.88rem;color:#EADCB8;font-weight:600}
+@media (max-width:860px){.bonus-grid{grid-template-columns:1fr 1fr;gap:12px}}
 </style>
 </head>
 <body>
@@ -325,7 +391,7 @@ footer{background:var(--deep);color:#7E9A8B;text-align:center;font-size:.8rem;pa
             <li><svg><use href="#ck"/></svg>Os 9 primeiros posts prontos no app</li>
           </ul>
         </div>
-        <div class="step-vis"><div class="phone"><div class="scr"><img src="img/semear-bio.jpg" alt="App Semear: bio pronta"></div></div></div>
+        <div class="step-vis"><div class="capa"><img src="img/capas/vitrine.jpg" alt="Módulo vitrine"></div></div>
       </div>
       <div class="step">
         <div>
@@ -338,17 +404,7 @@ footer{background:var(--deep);color:#7E9A8B;text-align:center;font-size:.8rem;pa
             <li><svg><use href="#ck"/></svg>Público da sua região, a partir de R$ 10 por dia</li>
           </ul>
         </div>
-        <div class="step-vis">
-          <div class="ui">
-            <div class="ui-h">Seu primeiro anúncio <em>● Ativo</em></div>
-            <div class="row"><span>Objetivo</span><b>Mensagens no WhatsApp</b></div>
-            <div class="row"><span>Público</span><b>Até 5 km do negócio</b></div>
-            <div class="row"><span>Investimento</span><b>R$ 10 por dia</b></div>
-            <div class="row"><span>Duração</span><b>7 dias</b></div>
-            <div class="bar"><i></i></div>
-          </div>
-          <span class="illus">Ilustração</span>
-        </div>
+        <div class="step-vis"><div class="capa"><img src="img/capas/visibilidade.jpg" alt="Módulo visibilidade"></div></div>
       </div>
       <div class="step">
         <div>
@@ -361,16 +417,7 @@ footer{background:var(--deep);color:#7E9A8B;text-align:center;font-size:.8rem;pa
             <li><svg><use href="#ck"/></svg>Cliente que volta e indica</li>
           </ul>
         </div>
-        <div class="step-vis">
-          <div class="chat">
-            <div class="top"><i></i>Cliente novo</div>
-            <div class="msg">Oi! Vi seu anúncio. Quanto fica o bolo de 2 kg?</div>
-            <div class="msg me">Oi, que bom que chamou! O de 2 kg serve 20 pessoas e fica R$ 150. Para qual data você precisa?</div>
-            <div class="msg">Sábado que vem 🎉</div>
-            <div class="msg me">Tenho sábado sim! Te mando os sabores?</div>
-          </div>
-          <span class="illus">Ilustração</span>
-        </div>
+        <div class="step-vis"><div class="capa"><img src="img/capas/venda.jpg" alt="Módulo venda"></div></div>
       </div>
     </div>
   </div>
@@ -399,18 +446,20 @@ footer{background:var(--deep);color:#7E9A8B;text-align:center;font-size:.8rem;pa
 <section>
   <div class="wrap">
     <h2>Tudo o que você precisa para anunciar sozinha, sem depender de agência.</h2>
-    <div class="deliver">
-      <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h10" stroke="#0F6B45" stroke-width="2.2" stroke-linecap="round"/></svg></div><div><small>O curso</small><h3>Aulas do Método 3V</h3><p>Vitrine, visibilidade e venda, tela por tela, para assistir no celular e fazer junto.</p></div></div>
-      <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H8l-4 4z" fill="none" stroke="#0F6B45" stroke-width="2.2" stroke-linejoin="round"/></svg></div><div><small>O curso</small><h3>Anúncios e mensagens prontos</h3><p>Modelos para copiar e adaptar ao seu negócio, do anúncio à resposta no WhatsApp.</p></div></div>
+    <p class="lead">O curso completo do Método 3V, com aulas curtas, tela por tela, e os modelos prontos para copiar.</p>
+    <div class="bonus-grid">
+      <figure><img src="img/capas/boas-vindas.jpg" alt="Aulas do Método 3V" loading="lazy"><figcaption>Aulas do Método 3V</figcaption></figure>
+      <figure><img src="img/capas/anuncios-prontos.jpg" alt="Anúncios prontos para copiar" loading="lazy"><figcaption>Anúncios prontos para copiar</figcaption></figure>
+      <figure><img src="img/capas/mensagens-prontas.jpg" alt="Mensagens prontas para o WhatsApp" loading="lazy"><figcaption>Mensagens prontas para o WhatsApp</figcaption></figure>
     </div>
-    <div class="bonus-h"><h2>Pensa que acabou?</h2><p class="lead">Você ainda leva:</p></div>
-    <div class="deliver">
-      <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><rect x="7" y="2.5" width="10" height="19" rx="2.5" fill="none" stroke="#0F6B45" stroke-width="2.2"/></svg></div><div><small>Bônus 1</small><h3>App Semear</h3><p>Monta a bio, os 9 posts e a sua primeira oferta.</p></div></div>
-      <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="#0F6B45" stroke-width="2.2"/><path d="M10 8.5l5 3.5-5 3.5z" fill="#0F6B45"/></svg></div><div><small>Bônus 2</small><h3>Encontro ao vivo mensal</h3><p>Toda última quinta-feira do mês, para tirar dúvida e ajustar o seu anúncio.</p></div></div>
-      <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3l1.8 4.7L18.5 9.5l-4.7 1.8L12 16l-1.8-4.7L5.5 9.5l4.7-1.8z" fill="none" stroke="#0F6B45" stroke-width="2" stroke-linejoin="round"/><path d="M18 15l.8 2.2L21 18l-2.2.8L18 21l-.8-2.2L15 18l2.2-.8z" fill="#0F6B45"/></svg></div><div><small>Bônus 3</small><h3>Anúncios com inteligência artificial</h3><p>Texto e imagem do anúncio prontos em minutos, sem precisar de designer.</p></div></div>
-      <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="3" fill="none" stroke="#0F6B45" stroke-width="2.2"/><path d="M3 9h18" stroke="#0F6B45" stroke-width="2.2"/></svg></div><div><small>Bônus 4</small><h3>Sua página com inteligência artificial</h3><p>Um site simples do seu negócio, na linguagem do seu cliente.</p></div></div>
-      <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2" fill="none" stroke="#0F6B45" stroke-width="2.2"/><path d="M8 8h8M8 12h8M8 16h5" stroke="#0F6B45" stroke-width="2"/></svg></div><div><small>Bônus 5</small><h3>Planilha do anúncio</h3><p>Para saber quanto gastou e quantas pessoas chamaram.</p></div></div>
-      <div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.5-7 10-7 10z" fill="none" stroke="#0F6B45" stroke-width="2.2" stroke-linejoin="round"/></svg></div><div><small>Bônus 6</small><h3>Aula Crenças e Princípios</h3><p>Vender e cobrar o preço justo, sem culpa.</p></div></div>
+    <div class="bonus-h"><h2>Pensa que acabou? <span class="script">você ainda leva</span></h2></div>
+    <div class="bonus-grid">
+      <figure><img src="img/capas/app-semear.jpg" alt="Bônus 1 · App Semear" loading="lazy"><figcaption>Bônus 1 · App Semear</figcaption></figure>
+      <figure><img src="img/capas/ao-vivo.jpg" alt="Bônus 2 · Encontro ao vivo mensal" loading="lazy"><figcaption>Bônus 2 · Encontro ao vivo mensal</figcaption></figure>
+      <figure><img src="img/capas/anuncios-ia.jpg" alt="Bônus 3 · Anúncios com IA" loading="lazy"><figcaption>Bônus 3 · Anúncios com IA</figcaption></figure>
+      <figure><img src="img/capas/pagina-ia.jpg" alt="Bônus 4 · Sua página com IA" loading="lazy"><figcaption>Bônus 4 · Sua página com IA</figcaption></figure>
+      <figure><img src="img/capas/planilha.jpg" alt="Bônus 5 · Planilha do anúncio" loading="lazy"><figcaption>Bônus 5 · Planilha do anúncio</figcaption></figure>
+      <figure><img src="img/capas/crencas.jpg" alt="Bônus 6 · Crenças e Princípios" loading="lazy"><figcaption>Bônus 6 · Crenças e Princípios</figcaption></figure>
     </div>
   </div>
 </section>
@@ -515,7 +564,7 @@ footer{background:var(--deep);color:#7E9A8B;text-align:center;font-size:.8rem;pa
 </section>
 
 <!-- GARANTIA -->
-<section class="garantia">
+<section class="garantia alt">
   <div class="wrap">
     <div class="g-box">
       <div class="g-selo"><b>30</b><span>dias de<br>garantia</span></div>
@@ -528,7 +577,7 @@ footer{background:var(--deep);color:#7E9A8B;text-align:center;font-size:.8rem;pa
 </section>
 
 <!-- FAQ -->
-<section class="alt">
+<section>
   <div class="wrap center">
     <h2>Perguntas frequentes</h2>
     <div class="faq" style="text-align:left">
