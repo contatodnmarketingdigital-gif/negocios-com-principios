@@ -451,6 +451,12 @@ section{padding:72px 0}
 .v-cren p{font-family:'Playfair Display',serif;color:#F4ECDA;font-size:1.25rem;line-height:1.3}
 .v-cren em{font-family:'Great Vibes',cursive;color:#E2C47E;font-size:1.5em;font-style:normal;font-weight:400}
 
+/* prateleira de capas */
+.prateleira{display:grid;grid-template-columns:repeat(6,1fr);gap:14px;margin-top:30px}
+.prateleira img{width:100%;aspect-ratio:2/3;object-fit:cover;border-radius:14px;box-shadow:0 20px 40px -26px rgba(11,42,29,.6);transition:transform .2s}
+.prateleira img:hover{transform:translateY(-4px)}
+@media (max-width:860px){.prateleira{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:10px;margin:24px -20px 0;padding:0 20px 10px;scrollbar-width:none}.prateleira img{flex:0 0 44%;width:44%;min-width:0;scroll-snap-align:start}}
+
 /* trechos reais de aula */
 .aula-vid{position:relative;border-radius:14px;overflow:hidden;background:#0B2A1D;aspect-ratio:16/9}
 .aula-vid video{width:100%;height:100%;object-fit:contain;display:block;background:#0B2A1D}
@@ -488,7 +494,7 @@ section{padding:72px 0}
 <svg width="0" height="0" style="position:absolute">
   <symbol id="ck" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#E7F6EE"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#0F6B45" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
   <symbol id="arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
-  <symbol id="leaf" viewBox="0 0 24 24"><path d="M12 21V11M12 11C12 6 8 4 4 4c0 5 3 7 8 7zm0 0c0-4 3-7 8-7 0 5-3 8-8 8" fill="none" stroke="#7EE2AD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="leaf" viewBox="0 0 24 24"><g fill="none" stroke="#E2C47E" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21V11"/><path d="M12 13c0-4 3-7 7-7 0 4-3 7-7 7z"/><path d="M12 11C12 7.5 9.5 5 6 5c0 3.5 2.5 6 6 6z"/></g></symbol>
 </svg>
 
 <!-- HERO -->
@@ -500,7 +506,7 @@ section{padding:72px 0}
     </nav>
     <div class="hero-grid">
       <div>
-        <div class="pill"><b></b>Para confeitaria, loja, salão e prestador de serviço</div>
+        <div class="pill"><b></b>Para confeitaria, loja, salão, prestador de serviço e profissional da saúde</div>
         <h1>Anuncie o seu negócio no Instagram em 3 passos simples e <em>seja o primeiro nome que o seu bairro lembra</em> na hora de comprar.</h1>
         <p class="lead">O passo a passo de tráfego pago, tela por tela, para você colocar o seu anúncio no ar com pouco por dia, mesmo sem entender de tecnologia.</p>
         <p class="kill">Sem agência. Sem virar blogueira. Sem gastar muito para começar.</p>
@@ -543,7 +549,7 @@ section{padding:72px 0}
     <div>
       <span class="eyebrow">Antes de comprar, me ouça ensinando</span>
       <h2>O anúncio não faz milagre. Ele <span class="script">amplifica</span> o que você já é.</h2>
-      <p class="lead">Por isso o método começa pela vitrine, e não pelo botão de impulsionar. É assim que eu ensino nas aulas: direto, sem enrolação, do jeito que eu falo com você aqui.</p>
+      <p class="lead">Por isso o método começa pela vitrine, e não pelo botão de impulsionar. E nada aqui é teoria: é o que eu aplico todo dia nos meus negócios e é disso que eu vivo hoje. Eu te ensino o que está funcionando agora, do jeito que eu faço.</p>
     </div>
   </div>
 </section>
@@ -557,8 +563,9 @@ section{padding:72px 0}
       <li><svg><use href="#ck"/></svg>Posta, capricha, e quem vê são sempre os mesmos</li>
       <li><svg><use href="#ck"/></svg>Quer anunciar, mas tem medo de errar e perder dinheiro</li>
       <li><svg><use href="#ck"/></svg>Não tem tempo para virar especialista em marketing</li>
+      <li><svg><use href="#ck"/></svg>É profissional da saúde, tem consultório e quer agenda cheia de quem mora perto</li>
+      <li><svg><use href="#ck"/></svg>Quer aprender com quem aplica isso todo dia no próprio negócio, e não só na teoria</li>
     </ul>
-    
   </div>
 </section>
 
@@ -643,6 +650,14 @@ section{padding:72px 0}
   <div class="wrap">
     <h2>Tudo o que você precisa para anunciar sozinha, sem depender de agência.</h2>
     <p class="lead">O curso completo do Método 3V, com aulas curtas, tela por tela, e os modelos prontos para copiar.</p>
+    <div class="prateleira">
+      <img src="img/capas-v7/comece.jpg" alt="Comece por aqui" loading="lazy">
+      <img src="img/capas-v7/vitrine.jpg" alt="Módulo 1 · Vitrine" loading="lazy">
+      <img src="img/capas-v7/visibilidade.jpg" alt="Módulo 2 · Visibilidade" loading="lazy">
+      <img src="img/capas-v7/venda.jpg" alt="Módulo 3 · Venda" loading="lazy">
+      <img src="img/capas-v7/ia.jpg" alt="Bônus · Anúncios com IA" loading="lazy">
+      <img src="img/capas-v7/aovivo.jpg" alt="Bônus · Ao vivo comigo" loading="lazy">
+    </div>
     <div class="mods">
       <article class="mod">
         <div class="mod-vis aula-vid">

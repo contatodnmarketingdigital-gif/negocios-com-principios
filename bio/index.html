@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Negócios com Princípios Prosperam · Delaine Nogueira</title>
+<meta name="description" content="Aprenda a turbinar o seu negócio no Instagram, do zero, tela por tela.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&family=Cinzel:wght@600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#06190F;--card:#0B2A1D;--ink:#F4ECDA;--muted:#B4C8BC;--gold:#E2C47E;--gold2:#C99A3C;--line:rgba(217,182,106,.25)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;line-height:1.5}
+img{display:block;max-width:100%}
+.page{max-width:480px;margin:0 auto;padding:18px 16px 40px}
+.top{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
+.marca{font-family:Cinzel,serif;font-size:.78rem;letter-spacing:.06em;color:var(--ink);line-height:1.25}
+.top small{color:var(--muted);font-size:.74rem;text-align:right}
+
+/* vídeo */
+.vid{position:relative;border-radius:18px;overflow:hidden;aspect-ratio:16/9;background:#000;border:1px solid var(--line)}
+.vid video{width:100%;height:100%;object-fit:cover}
+.ativar{position:absolute;inset:0;margin:auto;width:78%;height:64%;border:0;cursor:pointer;border-radius:16px;background:rgba(6,25,15,.82);backdrop-filter:blur(3px);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;font:600 .95rem Inter,sans-serif;box-shadow:0 0 0 2px var(--gold)}
+.ativar svg{width:40px;height:40px}
+.ativar small{font-weight:500;color:var(--gold);font-size:.8rem}
+.vid.on .ativar{display:none}
+
+h1{font-family:'Playfair Display',serif;font-size:1.65rem;line-height:1.15;margin:22px 0 8px;letter-spacing:-.01em}
+h1 em{font-style:normal;color:var(--gold)}
+.sub{color:var(--muted);font-size:.98rem}
+
+.vivo{margin-top:14px;padding:12px 14px;border-left:3px solid var(--gold);background:rgba(226,196,126,.07);border-radius:0 12px 12px 0;font-size:.92rem;color:#EADCB8}
+.vivo b{color:var(--gold)}
+.btn{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;margin-top:18px;padding:17px 18px;border-radius:14px;text-decoration:none;font:700 1.04rem 'Space Grotesk',sans-serif;background:linear-gradient(135deg,#F1D998,#C99A3C);color:#1C1404;box-shadow:0 14px 30px -12px rgba(217,182,106,.6)}
+.btn.zap{background:transparent;color:var(--ink);border:1.5px solid rgba(37,211,102,.7);box-shadow:none;font-size:.96rem;margin-top:10px}
+.btn.zap svg{width:20px;height:20px}
+.preco{text-align:center;margin-top:10px;color:var(--muted);font-size:.85rem}
+.preco b{color:var(--ink)}
+
+/* prateleira */
+.shelf-h{display:flex;justify-content:space-between;align-items:baseline;margin:36px 0 12px}
+.shelf-h h2{font-family:'Space Grotesk',sans-serif;font-size:1.12rem}
+.shelf-h span{color:var(--muted);font-size:.78rem}
+.shelf{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 -16px;padding:0 16px 10px;scrollbar-width:none}
+.shelf::-webkit-scrollbar{display:none}
+.capa{flex:0 0 42%;scroll-snap-align:start;position:relative;aspect-ratio:2/3;border-radius:12px;overflow:hidden;background:#0B2A1D;border:1px solid var(--line)}
+.capa img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 8%}
+.capa::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(3,16,9,.55) 0%,rgba(3,16,9,0) 16%,rgba(3,16,9,0) 46%,rgba(3,16,9,.85) 68%,rgba(3,16,9,.97) 100%)}
+.capa .t{position:absolute;z-index:1;left:10px;right:10px;bottom:12px}
+.capa .n{display:block;font:700 .62rem Inter,sans-serif;letter-spacing:.14em;color:var(--gold);text-transform:uppercase}
+.capa .t b{display:block;font:700 1.18rem/1.02 'Space Grotesk',sans-serif;text-transform:uppercase;letter-spacing:-.01em;margin-top:3px;color:#fff}
+.capa .t i{font-style:normal;display:block;font-size:.72rem;color:#EADCB8;margin-top:3px;line-height:1.2}
+.capa .m{position:absolute;z-index:1;left:0;right:0;top:8px;text-align:center;font:600 .5rem Cinzel,serif;letter-spacing:.12em;color:var(--gold)}
+.capa .t b{border-top:1px solid rgba(226,196,126,.5);padding-top:5px}
+
+.capa6{flex:0 0 46%;width:46%;min-width:0;scroll-snap-align:start;aspect-ratio:2/3;border-radius:12px;border:1px solid var(--line);object-fit:cover}
+/* lista */
+.lista h2{font-family:'Playfair Display',serif;font-size:1.35rem;margin:34px 0 14px}
+.lista h2 em{font-style:normal;color:var(--gold)}
+.lista ul{list-style:none;display:grid;gap:10px}
+.lista li{display:flex;gap:11px;align-items:flex-start;background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:12px;padding:12px 13px;font-size:.94rem}
+.lista li svg{width:20px;height:20px;flex:none;margin-top:1px}
+
+/* prova */
+.prova{margin-top:32px;border-radius:16px;overflow:hidden;border:1px solid var(--line);background:var(--card)}
+.prova img{width:100%;aspect-ratio:16/9;object-fit:cover}
+.prova p{padding:12px 14px;font-size:.88rem;color:var(--muted)}
+.prova p b{color:var(--ink)}
+.selos{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:12px}
+.selos div{text-align:center;background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:12px;padding:10px 6px;font-size:.72rem;color:var(--muted);line-height:1.25}
+.selos b{display:block;color:var(--gold);font:700 1rem 'Space Grotesk',sans-serif}
+footer{text-align:center;color:#7E9A8B;font-size:.72rem;margin-top:30px}
+</style>
+</head>
+<body>
+<main class="page">
+
+  <div class="top">
+    <div class="marca" style="display:flex;align-items:center;gap:9px"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#E2C47E" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21V11"/><path d="M12 13c0-4 3-7 7-7 0 4-3 7-7 7z"/><path d="M12 11C12 7.5 9.5 5 6 5c0 3.5 2.5 6 6 6z"/></svg><span>Negócios com<br>Princípios Prosperam</span></div>
+    <small>com<br>Delaine Nogueira</small>
+  </div>
+
+  <div class="vid" id="vid">
+    <video src="../img/aulas/trafego-nao-faz-milagre.mp4" poster="../img/aulas/trafego-nao-faz-milagre.jpg" autoplay muted loop playsinline preload="auto"></video>
+    <button class="ativar" type="button" aria-label="Ativar o som">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#E2C47E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H2v6h4l5 4V5z"/><path d="m23 9-6 6M17 9l6 6"/></svg>
+      Toque aqui para ouvir
+      <small>trecho real da aula</small>
+    </button>
+  </div>
+
+  <h1>Aprenda a <em>turbinar</em> o seu negócio no Instagram, do zero, tela por tela.</h1>
+  <p class="sub">Para quem tem negócio: confeitaria, loja, salão, prestador de serviço e também profissional da saúde com consultório. Para você que quer cliente novo chegando no WhatsApp, com pouco por dia.</p>
+  <p class="vivo"><b>Não é teoria.</b> É o que eu aplico todo dia nos meus negócios e é como eu vivo hoje. Eu te ensino o que está funcionando agora, do jeito que eu faço.</p>
+
+  <a class="btn" href="https://payfast.greenn.com.br/180747/offer/58h6DY">É disso que eu preciso</a>
+  <p class="preco"><b>12x de R$ 20,25</b> ou R$ 197 à vista · garantia de 30 dias</p>
+
+  <div class="shelf-h"><h2>As aulas que você vai assistir</h2><span>arraste →</span></div>
+  <div class="shelf">
+    <img class="capa6" src="../img/capas-v7/comece.jpg" alt="Comece por aqui">
+    <img class="capa6" src="../img/capas-v7/vitrine.jpg" alt="Módulo 1 · Vitrine">
+    <img class="capa6" src="../img/capas-v7/visibilidade.jpg" alt="Módulo 2 · Visibilidade">
+    <img class="capa6" src="../img/capas-v7/venda.jpg" alt="Módulo 3 · Venda">
+    <img class="capa6" src="../img/capas-v7/ia.jpg" alt="Bônus · Anúncios com IA">
+    <img class="capa6" src="../img/capas-v7/aovivo.jpg" alt="Bônus · Ao vivo comigo">
+  </div>
+
+  <section class="lista">
+    <h2>No curso eu te mostro, <em>passo a passo</em>:</h2>
+    <ul>
+      <li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="rgba(226,196,126,.15)"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#E2C47E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Como <b>turbinar do jeito certo</b>, sem jogar dinheiro fora no botão azul</span></li>
+      <li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="rgba(226,196,126,.15)"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#E2C47E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Como criar a <b>campanha de mensagem no Gerenciador</b>, mesmo começando do zero</span></li>
+      <li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="rgba(226,196,126,.15)"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#E2C47E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Como anunciar só para <b>quem mora perto</b>, a partir de R$ 10 por dia</span></li>
+      <li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="rgba(226,196,126,.15)"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#E2C47E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>O que responder no <b>WhatsApp</b> até a mensagem virar venda</span></li>
+      <li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="rgba(226,196,126,.15)"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#E2C47E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Como arrumar o seu <b>perfil</b> para quem chega do anúncio querer comprar</span></li>
+    </ul>
+  </section>
+
+  <div class="prova">
+    <img src="../img/v4/ev-sp.jpg" alt="Turma presencial em São Paulo">
+    <p><b>Turma presencial em São Paulo.</b> Na Brain Pro, enchemos turmas em SP, RJ, PR e PE com anúncios no Instagram. É o mesmo método que você vai aprender.</p>
+  </div>
+  <div class="selos">
+    <div><b>7 anos</b>com anúncios</div>
+    <div><b>30 dias</b>de garantia</div>
+    <div><b>Ao vivo</b>todo mês</div>
+  </div>
+
+  <a class="btn" href="https://payfast.greenn.com.br/180747/offer/58h6DY">É disso que eu preciso</a>
+  <a class="btn zap" href="https://wa.me/5521969363621?text=Oi%2C%20Delaine!%20Vim%20pela%20p%C3%A1gina%20do%20Neg%C3%B3cios%20com%20Princ%C3%ADpios%20e%20tenho%20uma%20d%C3%BAvida." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="#25D366"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.1 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l2 1c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg>Quero tirar uma dúvida no WhatsApp</a>
+
+  <footer>Negócios com Princípios Prosperam · Delaine Nogueira · Instituto Luminar</footer>
+</main>
+<script>
+(function(){
+  var box=document.getElementById('vid'),v=box.querySelector('video'),b=box.querySelector('.ativar');
+  b.addEventListener('click',function(){
+    box.classList.add('on');v.muted=false;v.loop=false;v.currentTime=0;v.controls=true;
+    var p=v.play();if(p&&p.catch)p.catch(function(){v.muted=true;v.play();});
+  });
+  v.addEventListener('ended',function(){box.classList.remove('on');v.controls=false;v.muted=true;v.loop=true;v.play();});
+})();
+</script>
+</body>
+</html>
