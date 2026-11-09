@@ -329,6 +329,158 @@ section{padding:72px 0}
 .alt .g-selo{box-shadow:0 0 0 8px #fff,0 0 0 10px #D9B66A,0 20px 40px -15px rgba(201,160,74,.5)}
 .alt .capa{border-color:rgba(201,160,74,.5)}
 .alt .dica-scroll{color:#6B7B71}
+
+/* ===== V5 MODERNA (08/11): hero com a turma de SP + módulos que mostram o que são ===== */
+.hero{min-height:min(760px,100vh);padding:28px 0 56px;display:flex;flex-direction:column;background:#06190F;isolation:isolate}
+.hero>.wrap{position:relative;z-index:2;width:100%;flex:1;display:flex;flex-direction:column}
+.hero-grid{grid-template-columns:minmax(0,560px);flex:1;align-content:center}
+.hero h1{font-size:clamp(2rem,4.2vw,3.2rem);text-shadow:0 2px 30px rgba(0,0,0,.35)}
+.hero .lead{color:#D5E2DA}
+.hero .checks{margin:22px 0 28px}
+.hero-bg{position:absolute;z-index:1;top:0;bottom:0;right:0;left:44%}
+.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:50% 18%}
+.hero-bg::after{content:"";position:absolute;inset:0;background:
+  linear-gradient(90deg,#06190F 0%,rgba(6,25,15,.82) 22%,rgba(6,25,15,.25) 55%,rgba(6,25,15,.05) 100%),
+  linear-gradient(0deg,#06190F 0%,rgba(6,25,15,0) 30%),
+  linear-gradient(180deg,rgba(6,25,15,.7) 0%,rgba(6,25,15,0) 22%)}
+.hero-tag{position:relative;margin-top:28px;font-size:.82rem;color:#B4C8BC;align-self:flex-end;background:rgba(3,16,9,.6);border:1px solid rgba(217,182,106,.3);padding:8px 14px;border-radius:99px;backdrop-filter:blur(6px)}
+.hero-tag b{color:#F3DFA6;font-weight:600}
+
+/* módulos do 3V: cards limpos que mostram o que se faz */
+.step-vis::before{display:none}
+.m-card{width:min(340px,100%);background:#fff;border-radius:22px;padding:16px;box-shadow:0 30px 60px -35px rgba(11,42,29,.45);border:1px solid rgba(15,107,69,.10);color:#0E1A14;font-size:.86rem}
+.m-top{display:flex;justify-content:space-between;font-size:.72rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#8A6416;margin-bottom:12px}
+.m-top span:last-child{color:#7A8A80}
+.m-note{display:flex;gap:8px;align-items:center;margin-top:12px;padding-top:12px;border-top:1px solid #EEF1EC;font-weight:600;font-size:.82rem;color:#1B2A21}
+.m-note svg{width:18px;height:18px;flex:none}
+.ig-head{display:flex;align-items:center;gap:18px}
+.av{width:56px;height:56px;border-radius:50%;display:grid;place-items:center;font-style:normal;font-weight:700;font-family:'Space Grotesk';color:#fff;background:linear-gradient(135deg,#C99A3C,#8A6416);box-shadow:0 0 0 3px #fff,0 0 0 5px #E2C47E;flex:none}
+.av.sm{width:30px;height:30px;font-size:.66rem;box-shadow:none}
+.ig-nums{text-align:center;line-height:1.2}.ig-nums b{display:block;font-size:.98rem}.ig-nums small{color:#7A8A80;font-size:.72rem}
+.ig-name{font-weight:700;margin-top:10px}
+.ig-bio{color:#3F4E45;font-size:.8rem;line-height:1.45}
+.ig-btn{margin-top:10px;background:#0F6B45;color:#fff;text-align:center;border-radius:8px;padding:7px;font-weight:600;font-size:.78rem}
+.ig-hl{display:flex;gap:10px;margin:12px 0}
+.ig-hl i{width:34px;height:34px;border-radius:50%;background:#F6F1E4;border:2px solid #E2C47E}
+.ig-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:3px;border-radius:8px;overflow:hidden}
+.ig-grid img{aspect-ratio:1;object-fit:cover;width:100%}
+.ads-map{position:relative;height:130px;border-radius:14px;overflow:hidden;margin-bottom:6px;background:
+  linear-gradient(90deg,transparent 48%,#fff 48% 52%,transparent 52%),linear-gradient(0deg,transparent 60%,#fff 60% 63%,transparent 63%),
+  linear-gradient(35deg,transparent 30%,#fff 30% 32%,transparent 32%),#E8EFE6}
+.ads-map .raio{position:absolute;left:50%;top:50%;width:104px;height:104px;margin:-52px 0 0 -52px;border-radius:50%;background:rgba(15,107,69,.16);border:2px solid #0F6B45}
+.ads-map .pin{position:absolute;left:50%;top:50%;width:14px;height:14px;margin:-7px 0 0 -7px;border-radius:50%;background:#0F6B45;box-shadow:0 0 0 4px #fff;z-index:1}
+.ads-map em{position:absolute;left:10px;bottom:8px;font-style:normal;font-size:.72rem;font-weight:600;background:#fff;padding:3px 8px;border-radius:99px}
+.m-card .row{border-color:#EEF1EC}.m-card .row span{color:#7A8A80}
+.ads-on{display:inline-flex;align-items:center;gap:8px;margin-top:8px;font-weight:600;font-size:.8rem;color:#0F6B45;background:#E7F6EE;padding:5px 10px;border-radius:99px}
+.ads-on i,.live-chip i{width:8px;height:8px;border-radius:50%;background:#13A35F;box-shadow:0 0 0 3px rgba(19,163,95,.25)}
+.wa{background:#EFEAE2;border-radius:14px;padding:0 10px 12px;display:grid;gap:7px;overflow:hidden}
+.wa-top{display:flex;align-items:center;gap:8px;background:#0B5C4B;color:#fff;margin:0 -10px 4px;padding:10px 12px;font-weight:600;font-size:.82rem}
+.wa-top i{width:24px;height:24px;border-radius:50%;background:#B9D4C6}
+.wa-top small{margin-left:auto;font-weight:400;opacity:.8;font-size:.7rem}
+.wa .msg,.v-msg .b{font-size:.78rem;line-height:1.35;color:#0E1A14}
+
+/* entregáveis e bônus: estilo vitrine limpa */
+.light{background:#FFFFFF!important;color:#1B2A21}
+.light h2{color:#0B2A1D}.light .lead{color:#4E5E54}
+.light .bonus-h h2{color:#0B2A1D}.light .script{color:#B08A3A}
+.mods{display:grid;grid-template-columns:repeat(3,1fr);gap:28px 22px;margin-top:34px}
+.mod h3{font-family:'Space Grotesk';color:#0B2A1D;font-size:1.12rem;margin-top:14px}
+.mod p{color:#5B6B62;font-size:.92rem;margin-top:6px}
+.tag-b{display:inline-block;margin-top:14px;font-size:.7rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#8A6416;background:#F6EEDA;padding:3px 9px;border-radius:99px}
+.tag-b+h3{margin-top:8px}
+.mod-vis{aspect-ratio:4/3;border-radius:18px;background:#F4F1EA;position:relative;overflow:hidden;display:grid;place-items:center;padding:18px;color:#0E1A14}
+.v-aula{place-items:stretch;grid-template-rows:auto 1fr;gap:10px}
+.player{position:relative;border-radius:12px;background:linear-gradient(135deg,#0B2A1D,#145A3C);height:96px;display:grid;place-items:center}
+.play{width:36px;height:36px;border-radius:50%;background:#fff;clip-path:none;position:relative}
+.play::after{content:"";position:absolute;left:14px;top:10px;border-left:12px solid #0B2A1D;border-top:8px solid transparent;border-bottom:8px solid transparent}
+.player small{position:absolute;left:10px;bottom:12px;color:#fff;font-size:.68rem;opacity:.9}
+.prog{position:absolute;left:10px;right:10px;bottom:6px;height:3px;border-radius:9px;background:linear-gradient(90deg,#E2C47E 45%,rgba(255,255,255,.3) 45%)}
+.aulas{list-style:none;display:grid;gap:5px;font-size:.74rem}
+.aulas li{display:flex;align-items:center;gap:8px;color:#7A8A80}
+.aulas li::before{content:"";width:12px;height:12px;border-radius:50%;border:2px solid #CFD8D1;flex:none}
+.aulas .ok{color:#1B2A21}.aulas .ok::before{background:#0F6B45;border-color:#0F6B45}
+.aulas .on{color:#0B2A1D;font-weight:700}.aulas .on::before{border-color:#C99A3C;background:#F3DFA6}
+.post{width:62%;background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 14px 30px -20px rgba(0,0,0,.4);font-size:.7rem}
+.post-h{display:flex;gap:7px;align-items:center;padding:7px 8px;line-height:1.1}.post-h small{display:block;color:#7A8A80;font-size:.62rem}
+.post img{aspect-ratio:1/1;object-fit:cover;width:100%;max-height:120px}
+.post-cta{display:flex;justify-content:space-between;padding:7px 9px;font-weight:600;color:#0F6B45;border-top:1px solid #EEF1EC}
+.copy-chip{position:absolute;right:14px;bottom:14px;background:#0B2A1D;color:#F3DFA6;font-size:.7rem;font-weight:600;padding:5px 10px;border-radius:99px}
+.copy-chip.in{position:static;display:inline-block;margin-left:6px;padding:2px 7px;font-size:.6rem;vertical-align:middle}
+.v-msg{place-items:stretch;align-content:center;gap:7px;background:#EFEAE2}
+.v-msg .b{max-width:82%;background:#fff;padding:7px 10px;border-radius:10px;box-shadow:0 1px 1px rgba(0,0,0,.06)}
+.v-msg .b.me{justify-self:end;background:#D9F7C5}
+.v-app{display:flex;justify-content:center;align-items:flex-end;gap:12px;padding-bottom:0;background:linear-gradient(160deg,#0F3B29,#06190F)}
+.phone.mini{width:96px;padding:5px;border-radius:20px;margin-bottom:-30px}
+.phone.mini .scr{border-radius:16px}
+.phone.mini:first-child{transform:translateY(-12px)}
+.v-live{background:#14231B;gap:10px;align-content:center}
+.call{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;width:100%}
+.call span{aspect-ratio:4/3;border-radius:8px;background:#22352A}
+.call .host{grid-column:span 2;grid-row:span 2;aspect-ratio:auto;background:linear-gradient(0deg,rgba(0,0,0,.45),transparent 40%),url(img/v4/delaine-sobre2.jpg) center 20%/cover,#1A2E23;display:flex;align-items:flex-end;padding:6px;font-size:.66rem;color:#fff;font-weight:600}
+.call span:nth-child(2){background:url(img/v4/neg-costureira.jpg) center/cover}
+.call span:nth-child(3){background:url(img/v4/neg-cafe.jpg) center/cover}
+.call span:nth-child(4){background:url(img/v4/neg-eletricista.jpg) center/cover}
+.call span:nth-child(5){background:url(img/v4/neg-salao.jpg) center/cover}
+.call span:nth-child(6){background:url(img/v4/neg-loja.jpg) center/cover}
+.live-chip{display:inline-flex;align-items:center;gap:8px;font-size:.72rem;font-weight:600;color:#fff;background:rgba(255,255,255,.08);padding:5px 10px;border-radius:99px}
+.v-ia{place-items:stretch;align-content:center;gap:6px}
+.prompt{background:#fff;border:1px solid #E3E8E2;border-radius:12px;padding:9px 11px;font-size:.74rem;line-height:1.35}
+.prompt small{display:block;color:#8A6416;font-weight:700;font-size:.62rem;text-transform:uppercase;letter-spacing:.06em}
+.cursor{display:inline-block;width:2px;height:12px;background:#0F6B45;margin-left:2px;vertical-align:middle;animation:pisca 1s steps(2) infinite}
+@keyframes pisca{50%{opacity:0}}
+.arrow-down{text-align:center;color:#B08A3A;font-weight:700;line-height:1}
+.out{background:#0B2A1D;border-radius:12px;padding:10px 12px;display:grid;gap:6px}
+.out b{color:#F3DFA6;font-size:.76rem}
+.out span,.pg span{height:7px;border-radius:9px;background:rgba(255,255,255,.18)}
+.out .s,.pg .s{width:60%}
+.browser{width:100%;background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 14px 30px -22px rgba(0,0,0,.45)}
+.bar3{display:flex;align-items:center;gap:5px;padding:7px 9px;background:#EDEAE2}
+.bar3 i{width:8px;height:8px;border-radius:50%;background:#D3CEC2}
+.bar3 span{margin-left:8px;font-size:.62rem;color:#7A8A80;background:#fff;padding:2px 8px;border-radius:6px}
+.pg{display:grid;gap:7px;padding:14px;background:linear-gradient(160deg,#FBF6EA,#fff)}
+.pg b{font-family:'Playfair Display',serif;font-size:1rem;color:#0B2A1D}
+.pg span{background:#E6E2D8}
+.pg em{font-style:normal;justify-self:start;margin-top:4px;background:#0F6B45;color:#fff;font-size:.66rem;font-weight:600;padding:5px 10px;border-radius:8px}
+.v-sheet{align-content:center;gap:6px}
+.v-sheet table{width:100%;border-collapse:collapse;background:#fff;border-radius:10px;overflow:hidden;font-size:.74rem;box-shadow:0 14px 30px -24px rgba(0,0,0,.45)}
+.v-sheet th{background:#0F6B45;color:#fff;font-weight:600;padding:7px 6px;text-align:left}
+.v-sheet td{padding:7px 6px;border-top:1px solid #EEF1EC}
+.v-sheet td:last-child{font-weight:700;color:#0F6B45}
+.sheet-note{font-size:.62rem;color:#7A8A80;justify-self:end}
+.v-cren{background:linear-gradient(160deg,#0F3B29,#06190F);text-align:center}
+.v-cren p{font-family:'Playfair Display',serif;color:#F4ECDA;font-size:1.25rem;line-height:1.3}
+.v-cren em{font-family:'Great Vibes',cursive;color:#E2C47E;font-size:1.5em;font-style:normal;font-weight:400}
+
+/* trechos reais de aula */
+.aula-vid{position:relative;border-radius:14px;overflow:hidden;background:#0B2A1D;aspect-ratio:16/9}
+.aula-vid video{width:100%;height:100%;object-fit:contain;display:block;background:#0B2A1D}
+.mod-vis.aula-vid{padding:0;display:block}
+.m-card:has(.aula-vid){width:min(520px,100%)}
+.chip-aula{position:absolute;left:10px;top:10px;display:flex;gap:6px;align-items:center;background:rgba(3,16,9,.78);color:#F3DFA6;font-size:.68rem;font-weight:700;letter-spacing:.03em;padding:4px 10px;border-radius:99px;pointer-events:none}
+.chip-aula::before{content:"";width:7px;height:7px;border-radius:50%;background:#E5484D;box-shadow:0 0 0 3px rgba(229,72,77,.25)}
+.som{position:absolute;right:10px;top:8px;border:0;cursor:pointer;background:linear-gradient(135deg,#F1D998,#C99A3C);color:#1C1404;font:600 .8rem Inter,sans-serif;padding:8px 14px;border-radius:99px;box-shadow:0 10px 24px -10px rgba(0,0,0,.6)}
+.aula-vid.on .som,.aula-vid.on .chip-aula{display:none}
+.ouca{background:#06190F}
+.ouca-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+.aula-vid.big{border-radius:22px;border:1px solid rgba(217,182,106,.4);box-shadow:0 30px 70px -35px rgba(0,0,0,.9)}
+.aula-vid.big .som{font-size:.92rem;padding:11px 18px;right:14px;top:12px}
+.eyebrow{display:inline-block;font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#E2C47E;margin-bottom:14px}
+
+@media (max-width:860px){
+  .ouca-grid{grid-template-columns:1fr;gap:28px}
+  .hero{min-height:auto;padding-top:20px}
+  .hero-bg{left:0;bottom:auto;height:400px}
+  .hero-bg img{object-position:50% 12%}
+  .hero-bg::after{background:linear-gradient(0deg,#06190F 0%,rgba(6,25,15,.35) 45%,rgba(6,25,15,.55) 100%)}
+  .hero-grid{padding-top:300px}
+  .hero-tag{align-self:flex-start;position:absolute;top:250px;left:20px;right:20px;margin:0;font-size:.72rem}
+  .about>*{min-width:0}
+  body{overflow-x:hidden}
+  .hero .btn{width:100%;justify-content:center}
+  .mods{grid-template-columns:1fr;gap:28px}
+  .m-card{width:100%}
+}
+@media (min-width:861px) and (max-width:1060px){.mods{grid-template-columns:repeat(2,1fr)}}
 </style>
 </head>
 <body>
@@ -357,13 +509,12 @@ section{padding:72px 0}
           <li><svg><use href="#ck"/></svg>App que monta o seu perfil</li>
           <li><svg><use href="#ck"/></svg>Ao vivo comigo todo mês</li>
         </ul>
-      </div>
-      <div class="hero-visual">
-        <div class="hero-photo"><img src="img/v4/delaine-hero4.jpg" alt="Delaine Nogueira"></div>
-        <div class="float f1"><div class="ic" style="background:#E7F6EE"><svg width="20" height="20" viewBox="0 0 24 24"><path d="M3 12l5 5L21 4" fill="none" stroke="#0F6B45" stroke-width="2.6" stroke-linecap="round"/></svg></div><div><strong>Anúncio no ar</strong><span>Público: até 5 km do negócio</span></div></div>
+        <a class="btn" href="#oferta">Quero aprender a anunciar <svg><use href="#arrow"/></svg></a>
       </div>
     </div>
+    <p class="hero-tag"><b>Delaine Nogueira</b> · 7 anos com anúncios</p>
   </div>
+  <div class="hero-bg" aria-hidden="true"><img src="img/v4/delaine-hero-sala.jpg" alt=""></div>
 </header>
 
 <!-- DOR -->
@@ -380,6 +531,22 @@ section{padding:72px 0}
 </section>
 
 <div class="quote"><div class="wrap"><p>Não vence o melhor.<br><span>Vence o mais conhecido.</span></p><small>Sendo justo ou não, o cliente compra de quem ele lembra primeiro.</small></div></div>
+
+<!-- TRECHO DE AULA -->
+<section class="ouca">
+  <div class="wrap ouca-grid">
+    <div class="aula-vid big">
+      <video src="img/aulas/trafego-nao-faz-milagre.mp4" poster="img/aulas/trafego-nao-faz-milagre.jpg" muted loop playsinline preload="metadata"></video>
+      <span class="chip-aula">Trecho real da aula</span>
+      <button class="som" type="button">▶ Ouvir com som</button>
+    </div>
+    <div>
+      <span class="eyebrow">Antes de comprar, me ouça ensinando</span>
+      <h2>O anúncio não faz milagre. Ele <span class="script">amplifica</span> o que você já é.</h2>
+      <p class="lead">Por isso o método começa pela vitrine, e não pelo botão de impulsionar. É assim que eu ensino nas aulas: direto, sem enrolação, do jeito que eu falo com você aqui.</p>
+    </div>
+  </div>
+</section>
 
 <!-- PARA QUEM -->
 <section>
@@ -412,7 +579,18 @@ section{padding:72px 0}
             <li><svg><use href="#ck"/></svg>Os 9 primeiros posts prontos no app</li>
           </ul>
         </div>
-        <div class="step-vis"><div class="capa"><img src="img/capas/vitrine.jpg" alt="Módulo vitrine"></div></div>
+        <div class="step-vis"><div class="m-card">
+          <div class="m-top"><span>Módulo 1</span><span>Seu perfil</span></div>
+          <div class="ig">
+            <div class="ig-head"><i class="av">DE</i><div class="ig-nums"><b>324</b><small>posts</small></div><div class="ig-nums"><b>8,9 mil</b><small>seguidores</small></div></div>
+            <p class="ig-name">Doce Encanto · Confeitaria</p>
+            <p class="ig-bio">Bolos e doces por encomenda<br>📍 Entrega em Boa Viagem<br>👇 Peça pelo WhatsApp</p>
+            <div class="ig-btn">Enviar mensagem</div>
+            <div class="ig-hl"><i></i><i></i><i></i><i></i></div>
+            <div class="ig-grid"><img src="img/v4/neg-cafe.jpg" alt=""><img src="img/v4/neg-pedido.jpg" alt=""><img src="img/v4/neg-loja.jpg" alt=""></div>
+          </div>
+          <div class="m-note"><svg><use href="#ck"/></svg>Bio, destaques e 9 primeiros posts</div>
+        </div></div>
       </div>
       <div class="step">
         <div>
@@ -425,7 +603,15 @@ section{padding:72px 0}
             <li><svg><use href="#ck"/></svg>Público da sua região, a partir de R$ 10 por dia</li>
           </ul>
         </div>
-        <div class="step-vis"><div class="capa"><img src="img/capas/visibilidade.jpg" alt="Módulo visibilidade"></div></div>
+        <div class="step-vis"><div class="m-card">
+          <div class="m-top"><span>Módulo 2</span><span>Seu anúncio</span></div>
+          <div class="aula-vid">
+            <video src="img/aulas/raio-do-anuncio.mp4" poster="img/aulas/raio-do-anuncio.jpg" muted loop playsinline preload="metadata"></video>
+            <span class="chip-aula">Trecho real da aula</span>
+            <button class="som" type="button">▶ Ouvir com som</button>
+          </div>
+          <div class="m-note"><svg><use href="#ck"/></svg>Escolhendo o raio em km ao redor do negócio</div>
+        </div></div>
       </div>
       <div class="step">
         <div>
@@ -438,31 +624,107 @@ section{padding:72px 0}
             <li><svg><use href="#ck"/></svg>Cliente que volta e indica</li>
           </ul>
         </div>
-        <div class="step-vis"><div class="capa"><img src="img/capas/venda.jpg" alt="Módulo venda"></div></div>
+        <div class="step-vis"><div class="m-card">
+          <div class="m-top"><span>Módulo 3</span><span>Seu atendimento</span></div>
+          <div class="aula-vid">
+            <video src="img/aulas/erros-no-whatsapp.mp4" poster="img/aulas/erros-no-whatsapp.jpg" muted loop playsinline preload="metadata"></video>
+            <span class="chip-aula">Trecho real da aula</span>
+            <button class="som" type="button">▶ Ouvir com som</button>
+          </div>
+          <div class="m-note"><svg><use href="#ck"/></svg>Os erros que fazem você perder o cliente no WhatsApp</div>
+        </div></div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- O QUE RECEBE -->
-<section>
+<section class="light">
   <div class="wrap">
     <h2>Tudo o que você precisa para anunciar sozinha, sem depender de agência.</h2>
     <p class="lead">O curso completo do Método 3V, com aulas curtas, tela por tela, e os modelos prontos para copiar.</p>
-    <div class="bonus-grid">
-      <figure><img src="img/capas/boas-vindas.jpg" alt="Aulas do Método 3V" loading="lazy"><figcaption>Aulas do Método 3V</figcaption></figure>
-      <figure><img src="img/capas/anuncios-prontos.jpg" alt="Anúncios prontos para copiar" loading="lazy"><figcaption>Anúncios prontos para copiar</figcaption></figure>
-      <figure><img src="img/capas/mensagens-prontas.jpg" alt="Mensagens prontas para o WhatsApp" loading="lazy"><figcaption>Mensagens prontas para o WhatsApp</figcaption></figure>
+    <div class="mods">
+      <article class="mod">
+        <div class="mod-vis aula-vid">
+          <video src="img/aulas/resultado-mensagens.mp4" poster="img/aulas/resultado-mensagens.jpg" muted loop playsinline preload="metadata"></video>
+          <span class="chip-aula">Trecho real da aula</span>
+          <button class="som" type="button">▶ Ouvir com som</button>
+        </div>
+        <h3>Aulas do Método 3V</h3>
+        <p>Aulas tela por tela: você vê onde eu clico e já faz junto, até ler o resultado do seu anúncio.</p>
+      </article>
+      <article class="mod">
+        <div class="mod-vis v-ad">
+          <div class="post"><div class="post-h"><i class="av sm">SB</i><div><b>Salão Bela</b><small>Patrocinado</small></div></div><img src="img/v4/neg-salao.jpg" alt=""><div class="post-cta">Enviar mensagem <span>›</span></div></div>
+          <span class="copy-chip">Copiar texto</span>
+        </div>
+        <h3>Anúncios prontos para copiar</h3>
+        <p>Modelos de texto para confeitaria, loja, salão e serviço. É só trocar o nome.</p>
+      </article>
+      <article class="mod">
+        <div class="mod-vis v-msg">
+          <div class="b">Oi! Quanto custa?</div>
+          <div class="b me">Oi! Que bom que chamou 😊 Te mando as opções…<span class="copy-chip in">Copiar</span></div>
+          <div class="b">Vou pensar.</div>
+          <div class="b me">Claro! Só te aviso que…<span class="copy-chip in">Copiar</span></div>
+        </div>
+        <h3>Mensagens prontas para o WhatsApp</h3>
+        <p>Do primeiro "oi" até a indicação, incluindo a resposta para o "vou pensar".</p>
+      </article>
     </div>
-    <p class="dica-scroll">Arraste para o lado →</p>
+
     <div class="bonus-h"><h2>Pensa que acabou? <span class="script">você ainda leva</span></h2></div>
-    <div class="bonus-grid">
-      <figure><img src="img/capas/app-semear.jpg" alt="Bônus 1 · App Semear" loading="lazy"><figcaption>Bônus 1 · App Semear</figcaption></figure>
-      <figure><img src="img/capas/ao-vivo.jpg" alt="Bônus 2 · Encontro ao vivo mensal" loading="lazy"><figcaption>Bônus 2 · Encontro ao vivo mensal</figcaption></figure>
-      <figure><img src="img/capas/anuncios-ia.jpg" alt="Bônus 3 · Anúncios com IA" loading="lazy"><figcaption>Bônus 3 · Anúncios com IA</figcaption></figure>
-      <figure><img src="img/capas/pagina-ia.jpg" alt="Bônus 4 · Sua página com IA" loading="lazy"><figcaption>Bônus 4 · Sua página com IA</figcaption></figure>
-      <figure><img src="img/capas/planilha.jpg" alt="Bônus 5 · Planilha do anúncio" loading="lazy"><figcaption>Bônus 5 · Planilha do anúncio</figcaption></figure>
-      <figure><img src="img/capas/crencas.jpg" alt="Bônus 6 · Crenças e Princípios" loading="lazy"><figcaption>Bônus 6 · Crenças e Princípios</figcaption></figure>
+    <div class="mods">
+      <article class="mod">
+        <div class="mod-vis v-app"><div class="phone mini"><div class="scr"><img src="img/semear-inicio.jpg" alt="Tela do app Semear" loading="lazy"></div></div><div class="phone mini"><div class="scr"><img src="img/semear-bio.jpg" alt="" loading="lazy"></div></div></div>
+        <span class="tag-b">Bônus 1</span>
+        <h3>App Semear</h3>
+        <p>Responde algumas perguntas e o app monta a sua bio e os seus primeiros posts.</p>
+      </article>
+      <article class="mod">
+        <div class="mod-vis v-live">
+          <div class="call"><span class="host">Delaine</span><span></span><span></span><span></span><span></span><span></span></div>
+          <div class="live-chip"><i></i>Ao vivo · última quinta do mês</div>
+        </div>
+        <span class="tag-b">Bônus 2</span>
+        <h3>Encontro ao vivo mensal</h3>
+        <p>Tira-dúvidas e correção de anúncio de alunos, comigo, online.</p>
+      </article>
+      <article class="mod">
+        <div class="mod-vis aula-vid">
+          <video src="img/aulas/anuncio-com-ia.mp4" poster="img/aulas/anuncio-com-ia.jpg" muted loop playsinline preload="metadata"></video>
+          <span class="chip-aula">Trecho real da aula</span>
+          <button class="som" type="button">▶ Ouvir com som</button>
+        </div>
+        <span class="tag-b">Bônus 3</span>
+        <h3>Anúncios com IA</h3>
+        <p>Você descreve o seu negócio e recebe o texto e a imagem do anúncio em minutos.</p>
+      </article>
+      <article class="mod">
+        <div class="mod-vis v-page">
+          <div class="browser"><div class="bar3"><i></i><i></i><i></i><span>docencanto.com.br</span></div><div class="pg"><b>Bolos que viram lembrança</b><span></span><span class="s"></span><em>Pedir pelo WhatsApp</em></div></div>
+        </div>
+        <span class="tag-b">Bônus 4</span>
+        <h3>Sua página com IA</h3>
+        <p>Uma página simples do seu negócio, escrita na linguagem do seu cliente.</p>
+      </article>
+      <article class="mod">
+        <div class="mod-vis v-sheet">
+          <table><tr><th>Semana</th><th>Gastou</th><th>Chamaram</th><th>Venderam</th></tr><tr><td>1</td><td>R$ 70</td><td>18</td><td>5</td></tr><tr><td>2</td><td>R$ 70</td><td>23</td><td>7</td></tr><tr><td>3</td><td>R$ 70</td><td>26</td><td>9</td></tr></table>
+          <small class="sheet-note">Exemplo ilustrativo</small>
+        </div>
+        <span class="tag-b">Bônus 5</span>
+        <h3>Planilha do anúncio</h3>
+        <p>Quanto você gastou, quantos chamaram e quantos compraram, numa folha só.</p>
+      </article>
+      <article class="mod">
+        <div class="mod-vis v-cren">
+          <p>"Cobrar o preço justo<br>também é <em>princípio</em>."</p>
+        </div>
+        <span class="tag-b">Bônus 6</span>
+        <h3>Crenças e Princípios</h3>
+        <p>Uma aula para vender e cobrar o preço justo, sem culpa.</p>
+      </article>
     </div>
   </div>
 </section>
@@ -593,5 +855,26 @@ section{padding:72px 0}
 </section>
 
 <footer>Negócios com Princípios Prosperam · Delaine Nogueira · Instituto Luminar</footer>
+<script>
+(function(){
+  var boxes=[].slice.call(document.querySelectorAll('.aula-vid'));
+  var io='IntersectionObserver' in window ? new IntersectionObserver(function(es){
+    es.forEach(function(e){var b=e.target,v=b.querySelector('video');
+      if(b.classList.contains('on'))return;
+      if(e.isIntersecting){var p=v.play();if(p&&p.catch)p.catch(function(){});}else{v.pause();}
+    });
+  },{threshold:.4}) : null;
+  boxes.forEach(function(b){
+    var v=b.querySelector('video'),btn=b.querySelector('.som');
+    if(io)io.observe(b);
+    btn.addEventListener('click',function(){
+      boxes.forEach(function(o){if(o!==b){var ov=o.querySelector('video');if(o.classList.contains('on')){o.classList.remove('on');ov.controls=false;}ov.muted=true;}});
+      b.classList.add('on');v.muted=false;v.loop=false;v.currentTime=0;v.controls=true;
+      var p=v.play();if(p&&p.catch)p.catch(function(){v.muted=true;v.play();});
+    });
+    v.addEventListener('ended',function(){b.classList.remove('on');v.controls=false;v.muted=true;v.loop=true;v.play();});
+  });
+})();
+</script>
 </body>
 </html>
