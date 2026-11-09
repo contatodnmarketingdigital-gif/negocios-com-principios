@@ -41,7 +41,11 @@ h1 em{font-style:normal;color:var(--gold)}
 .shelf-h{display:flex;justify-content:space-between;align-items:baseline;margin:36px 0 12px}
 .shelf-h h2{font-family:'Space Grotesk',sans-serif;font-size:1.12rem}
 .shelf-h span{color:var(--muted);font-size:.78rem}
-.shelf{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 -16px;padding:0 16px 10px;scrollbar-width:none}
+.shelf{overflow:hidden;margin:0 -16px;padding:4px 0 12px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.trilho{display:flex;gap:10px;width:max-content;animation:passa 32s linear infinite}
+.shelf:hover .trilho,.shelf:active .trilho{animation-play-state:paused}
+@keyframes passa{from{transform:translateX(0)}to{transform:translateX(calc(-50% - 5px))}}
+@media (prefers-reduced-motion:reduce){.trilho{animation:none}.shelf{overflow-x:auto}}
 .shelf::-webkit-scrollbar{display:none}
 .capa{flex:0 0 42%;scroll-snap-align:start;position:relative;aspect-ratio:2/3;border-radius:12px;overflow:hidden;background:#0B2A1D;border:1px solid var(--line)}
 .capa img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 8%}
@@ -53,7 +57,7 @@ h1 em{font-style:normal;color:var(--gold)}
 .capa .m{position:absolute;z-index:1;left:0;right:0;top:8px;text-align:center;font:600 .5rem Cinzel,serif;letter-spacing:.12em;color:var(--gold)}
 .capa .t b{border-top:1px solid rgba(226,196,126,.5);padding-top:5px}
 
-.capa6{flex:0 0 46%;width:46%;min-width:0;scroll-snap-align:start;aspect-ratio:2/3;border-radius:12px;border:1px solid var(--line);object-fit:cover}
+.capa6{flex:0 0 auto;width:172px;aspect-ratio:2/3;border-radius:12px;border:1px solid var(--line);object-fit:cover}
 /* lista */
 .lista h2{font-family:'Playfair Display',serif;font-size:1.35rem;margin:34px 0 14px}
 .lista h2 em{font-style:normal;color:var(--gold)}
@@ -81,7 +85,7 @@ footer{text-align:center;color:#7E9A8B;font-size:.72rem;margin-top:30px}
   </div>
 
   <div class="vid" id="vid">
-    <video src="../img/aulas/trafego-nao-faz-milagre.mp4" poster="../img/aulas/trafego-nao-faz-milagre.jpg" autoplay muted loop playsinline preload="auto"></video>
+    <video src="../img/aulas/aula-mentalidade-2min.mp4" poster="../img/aulas/aula-mentalidade-2min.jpg" autoplay muted loop playsinline preload="metadata"></video>
     <button class="ativar" type="button" aria-label="Ativar o som">
       <svg viewBox="0 0 24 24" fill="none" stroke="#E2C47E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H2v6h4l5 4V5z"/><path d="m23 9-6 6M17 9l6 6"/></svg>
       Toque aqui para ouvir
@@ -96,15 +100,21 @@ footer{text-align:center;color:#7E9A8B;font-size:.72rem;margin-top:30px}
   <a class="btn" href="https://payfast.greenn.com.br/180747/offer/58h6DY">É disso que eu preciso</a>
   <p class="preco"><b>12x de R$ 20,25</b> ou R$ 197 à vista · garantia de 30 dias</p>
 
-  <div class="shelf-h"><h2>As aulas que você vai assistir</h2><span>arraste →</span></div>
-  <div class="shelf">
+  <div class="shelf-h"><h2>As aulas que você vai assistir</h2></div>
+  <div class="shelf"><div class="trilho">
     <img class="capa6" src="../img/capas-v7/comece.jpg" alt="Comece por aqui">
     <img class="capa6" src="../img/capas-v7/vitrine.jpg" alt="Módulo 1 · Vitrine">
     <img class="capa6" src="../img/capas-v7/visibilidade.jpg" alt="Módulo 2 · Visibilidade">
     <img class="capa6" src="../img/capas-v7/venda.jpg" alt="Módulo 3 · Venda">
     <img class="capa6" src="../img/capas-v7/ia.jpg" alt="Bônus · Anúncios com IA">
     <img class="capa6" src="../img/capas-v7/aovivo.jpg" alt="Bônus · Ao vivo comigo">
-  </div>
+    <img aria-hidden="true" class="capa6" src="../img/capas-v7/comece.jpg" alt="Comece por aqui">
+    <img aria-hidden="true" class="capa6" src="../img/capas-v7/vitrine.jpg" alt="Módulo 1 · Vitrine">
+    <img aria-hidden="true" class="capa6" src="../img/capas-v7/visibilidade.jpg" alt="Módulo 2 · Visibilidade">
+    <img aria-hidden="true" class="capa6" src="../img/capas-v7/venda.jpg" alt="Módulo 3 · Venda">
+    <img aria-hidden="true" class="capa6" src="../img/capas-v7/ia.jpg" alt="Bônus · Anúncios com IA">
+    <img aria-hidden="true" class="capa6" src="../img/capas-v7/aovivo.jpg" alt="Bônus · Ao vivo comigo">
+  </div>  </div>
 
   <section class="lista">
     <h2>No curso eu te mostro, <em>passo a passo</em>:</h2>
