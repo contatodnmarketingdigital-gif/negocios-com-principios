@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Área da Aluna · Negócios com Princípios</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,500&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#06190F;--deep:#0B2A1D;--card:#0E2F21;--line:rgba(226,196,126,.22);--gold:#E2C47E;--gold2:#C99A3C;--cream:#F4ECDA;--muted:#B9D4C6;--soft:#7A8A80;--ok:#5FD39A}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--cream);font-family:'Space Grotesk',system-ui,sans-serif;line-height:1.55;min-height:100vh}
+a{color:var(--gold)}
+.serif{font-family:'Playfair Display',serif}
+.wrap{max-width:1180px;margin:0 auto;padding:0 16px}
+/* portão */
+#portao{min-height:100vh;display:none;place-items:center;padding:24px;background:radial-gradient(ellipse at top,#0F6B45 0%,transparent 60%),var(--bg)}
+.caixa{width:100%;max-width:420px;background:var(--deep);border:1px solid var(--line);border-radius:22px;padding:34px 26px;text-align:center}
+.selo{width:56px;height:56px;border-radius:16px;margin:0 auto 18px;display:grid;place-items:center;background:linear-gradient(135deg,#1C7A52,#0B3A27);border:1px solid rgba(226,196,126,.45)}
+.caixa h1{font-family:'Playfair Display',serif;font-weight:600;font-size:1.7rem;line-height:1.2;margin-bottom:8px}
+.caixa h1 em{color:var(--gold);font-style:italic}
+.caixa p{color:var(--muted);font-size:.95rem;margin-bottom:22px}
+.caixa input{width:100%;padding:14px 16px;border-radius:12px;border:1px solid var(--line);background:#06190F;color:var(--cream);font:inherit;font-size:1rem;text-align:center;letter-spacing:.08em;text-transform:uppercase}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;width:100%;margin-top:12px;padding:14px;border:0;border-radius:12px;background:var(--gold);color:#0B2A1D;font:inherit;font-weight:700;font-size:1rem;cursor:pointer}
+.erro{color:#F2A07B;font-size:.88rem;min-height:1.2em;margin-top:10px}
+/* área */
+#area{display:none}
+header.topo{border-bottom:1px solid var(--line);background:rgba(6,25,15,.92);position:sticky;top:0;z-index:5;backdrop-filter:blur(8px)}
+header.topo .wrap{display:flex;align-items:center;justify-content:space-between;height:62px;gap:12px}
+.marca{display:flex;align-items:center;gap:10px;font-weight:700;font-size:.95rem}
+.marca i{width:32px;height:32px;border-radius:9px;display:grid;place-items:center;background:linear-gradient(135deg,#1C7A52,#0B3A27);border:1px solid rgba(226,196,126,.45)}
+.prog-topo{font-size:.82rem;color:var(--muted);white-space:nowrap}
+.hero{padding:34px 0 18px}
+.hero small{color:var(--gold);letter-spacing:.14em;text-transform:uppercase;font-size:.75rem;font-weight:700}
+.hero h2{font-family:'Playfair Display',serif;font-weight:600;font-size:clamp(1.7rem,4vw,2.5rem);line-height:1.15;margin:6px 0 8px}
+.hero h2 em{color:var(--gold);font-style:italic;font-weight:500}
+.hero p{color:var(--muted);max-width:640px}
+.barra{height:6px;background:#0E2F21;border-radius:9px;overflow:hidden;margin-top:16px;max-width:420px}
+.barra b{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--gold2),var(--gold));transition:width .4s}
+.grade{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:24px;padding:18px 0 60px}
+@media(max-width:900px){.grade{grid-template-columns:1fr}}
+.player{background:#000;border-radius:16px;overflow:hidden;aspect-ratio:16/9;border:1px solid var(--line);position:relative}
+.player iframe,.player video{width:100%;height:100%;border:0;display:block}
+.vazio{position:absolute;inset:0;display:grid;place-items:center;text-align:center;padding:20px;color:var(--muted);background:linear-gradient(135deg,#0B2A1D,#06190F)}
+.vazio strong{display:block;color:var(--cream);font-family:'Playfair Display',serif;font-size:1.3rem;margin-bottom:6px}
+.info{padding:20px 2px}
+.tag{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:4px 10px;border-radius:99px;border:1px solid var(--line);color:var(--gold);margin-bottom:10px}
+.tag.duv{color:#9FD8F0;border-color:rgba(159,216,240,.3)}
+.info h3{font-family:'Playfair Display',serif;font-weight:600;font-size:1.55rem;line-height:1.2;margin-bottom:6px}
+.meta{color:var(--soft);font-size:.88rem;margin-bottom:14px}
+.info p.res{color:var(--muted);margin-bottom:18px}
+.acoes{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:22px}
+.acoes button{width:auto;margin:0;padding:11px 18px;font-size:.92rem}
+.btn.sec{background:transparent;color:var(--cream);border:1px solid var(--line)}
+.btn.feito{background:var(--ok);color:#06190F}
+.bloco{background:var(--deep);border:1px solid var(--line);border-radius:16px;padding:18px;margin-bottom:16px}
+.bloco h4{font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
+.caps{list-style:none}
+.caps li{display:flex;gap:12px;padding:9px 0;border-top:1px solid rgba(226,196,126,.1);cursor:pointer}
+.caps li:first-child{border-top:0}
+.caps li:hover span{color:var(--gold)}
+.caps time{font-variant-numeric:tabular-nums;color:var(--gold);font-weight:700;font-size:.88rem;min-width:52px}
+.caps span{font-size:.95rem}
+.tarefa li{margin:0 0 8px 18px;color:var(--muted)}
+.mat{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 14px;border:1px solid var(--line);border-radius:12px;margin-bottom:8px;text-decoration:none;color:var(--cream)}
+.mat:hover{border-color:var(--gold)}
+.mat b{color:var(--gold);font-size:.85rem;white-space:nowrap}
+/* lista lateral */
+aside .mod{margin-bottom:18px}
+aside .mod>h5{font-size:.76rem;letter-spacing:.12em;text-transform:uppercase;color:var(--soft);margin:0 0 8px 4px}
+.aula{display:flex;gap:12px;align-items:flex-start;width:100%;text-align:left;background:var(--deep);border:1px solid transparent;border-radius:14px;padding:12px;margin-bottom:8px;color:var(--cream);font:inherit;cursor:pointer}
+.aula:hover{border-color:var(--line)}
+.aula.ativa{border-color:var(--gold);background:var(--card)}
+.aula .n{flex:none;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;font-size:.8rem;font-weight:700;background:#06190F;border:1px solid var(--line);color:var(--gold)}
+.aula.ok .n{background:var(--ok);color:#06190F;border-color:var(--ok)}
+.aula b{display:block;font-size:.93rem;font-weight:500;line-height:1.3}
+.aula small{color:var(--soft);font-size:.8rem}
+.ajuda{background:linear-gradient(135deg,#0F6B45,#0B2A1D);border:1px solid var(--line);border-radius:16px;padding:18px}
+.ajuda p{color:var(--muted);font-size:.92rem;margin:6px 0 12px}
+footer{border-top:1px solid var(--line);color:var(--soft);font-size:.8rem;text-align:center;padding:22px 16px}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute"><symbol id="leaf" viewBox="0 0 24 24"><path fill="none" stroke="#E2C47E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M5 19c0-8 5-13 14-14-1 9-6 14-14 14zm0 0 8-8"/></symbol></svg>
+
+<section id="portao">
+  <div class="caixa">
+    <div class="selo"><svg width="26" height="26"><use href="#leaf"/></svg></div>
+    <h1>Área da <em>aluna</em></h1>
+    <p>Negócios com Princípios Prosperam · aulas gravadas da turma com a Delaine Nogueira.</p>
+    <form id="fEntrar">
+      <input id="codigo" placeholder="Digite o código da turma" autocomplete="off" aria-label="Código da turma">
+      <button class="btn" type="submit">Entrar nas aulas</button>
+      <div class="erro" id="erro"></div>
+    </form>
+  </div>
+</section>
+
+<div id="area" style="display:block">
+  <header class="topo"><div class="wrap">
+    <div class="marca"><i><svg width="17" height="17"><use href="#leaf"/></svg></i>Negócios com Princípios</div>
+    <div class="prog-topo" id="progTopo"></div>
+  </div></header>
+
+  <div class="wrap">
+    <section class="hero">
+      <small>Aulas gravadas da turma</small>
+      <h2>Antes do botão, <em>vem a estratégia.</em></h2>
+      <p>Assista no seu tempo. Cada aula tem o conteúdo separado do tira-dúvidas, os capítulos para pular direto ao assunto e a tarefa da semana.</p>
+      <div class="barra"><b id="barra"></b></div>
+    </section>
+
+    <div class="grade">
+      <main>
+        <div class="player" id="player"></div>
+        <div class="info">
+          <span class="tag" id="tag"></span>
+          <h3 id="titulo"></h3>
+          <div class="meta" id="meta"></div>
+          <p class="res" id="resumo"></p>
+          <div class="acoes">
+            <button class="btn" id="bFeito" type="button">Marcar como assistida</button>
+            <button class="btn sec" id="bProx" type="button">Próxima aula</button>
+          </div>
+          <div class="bloco" id="blCaps"><h4>Capítulos</h4><ul class="caps" id="caps"></ul></div>
+          <div class="bloco" id="blTarefa"><h4>Exercício da semana</h4><ul class="tarefa" id="tarefa"></ul></div>
+          <div class="bloco" id="blMat"><h4>Material para baixar</h4><div id="mat"></div></div>
+        </div>
+      </main>
+      <aside>
+        <div id="lista"></div>
+        <div class="ajuda">
+          <strong class="serif">Ficou com dúvida?</strong>
+          <p>Anote o minuto da aula e traga na próxima quarta, ou chame a Delaine no privado.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+  <footer>Negócios com Princípios Prosperam · Delaine Nogueira · Material exclusivo das alunas da turma, não compartilhe o link.</footer>
+</div>
+
+<script>
+/* ====== CONFIGURAÇÃO ======
+   video: link do YouTube (não listado), do Google Drive (compartilhado "qualquer pessoa com o link")
+          ou de um arquivo .mp4. Deixe "" enquanto o vídeo não estiver no ar.
+   caps: [ "mm:ss" ou "h:mm:ss", "título" ] — tempos do vídeo já cortado.
+   tarefa: lista de passos do exercício da semana.
+   materiais: [ ["Nome do arquivo", "link"] ] — PDF na pasta materiais/ ou link do Drive/Canva.   */
+const CODIGO = "SEMEAR";
+const MODULOS = [
+  { nome: "Aula 1 · Instagram que atrai clientes (02/11)", aulas: [
+    { id:"a1", tipo:"Conteúdo", titulo:"Turbinar pelo Instagram: o passo a passo", dur:"30 min", video:"",
+      resumo:"Revisão do evento e o passo a passo de turbinar um post para receber mensagens no WhatsApp: objetivo certo, público, orçamento, duração, melhor dia, pagamento e como ler os resultados. No fim, os modelos de post do app Semear.", caps:[["00:00", "Recapitulando os 9 pilares do evento"], ["00:36", "Fazer junto: o passo a passo do Turbinar"], ["02:14", "Os 3 objetivos do Turbinar: perfil, site e mensagem"], ["02:41", "A inteligência do Meta lê o seu anúncio"], ["05:05", "Criando o seu público: local e raio"], ["07:22", "Idade, gênero e interesses"], ["08:34", "O gancho conta mais que a segmentação"], ["10:11", "Orçamento e duração do anúncio"], ["11:58", "Qual o melhor dia da semana para anunciar?"], ["13:57", "Pagamento: cartão ou Pix"], ["15:46", "Lendo os resultados: alcance, visualizações e salvamentos"], ["18:33", "Anúncio é investimento: a jornada de compra"], ["19:54", "Conversa cara: o que testar"], ["22:01", "Conhecimento sem ação não traz resultado"], ["24:10", "O exercício da semana"], ["24:56", "Modelos de post no app Semear"], ["27:35", "Use IA com moderação: foto real vende"], ["28:50", "Próxima aula: Gerenciador de Anúncios"]], tarefa:["Escolha um post do seu perfil e clique em Turbinar.", "Objetivo: receber mensagens no WhatsApp. Público: o seu raio de atendimento, a idade de quem compra de você e no máximo 2 ou 3 interesses.", "Comece com o mínimo que aparecer (R$ 6 a R$ 11 por dia), por 3 a 7 dias, de preferência começando na segunda.", "Todo dia de manhã olhe o anúncio: alcance, conversas e salvamentos.", "Traga o print do resultado na próxima aula para analisarmos juntas."] },
+    { id:"a1d", tipo:"Tira-dúvidas", titulo:"Tira-dúvidas: Instagram ou Facebook, acompanhamento e IA", dur:"22 min", video:"",
+      resumo:"Por que o mesmo anúncio funciona num lugar e não no outro, por que acompanhar todo dia, fatia de público, vender sem empurrar, criar posts com IA e testar Reels antes de postar.", caps:[["00:00", "Instagram e Facebook: o anúncio é o mesmo?"], ["03:16", "Cada negócio é um teste"], ["04:43", "Anúncio precisa de acompanhamento todo dia"], ["05:23", "Fatia de público: por que o anúncio não vende"], ["06:55", "Tráfego pago não é caça-níquel"], ["07:55", "Arinete: anúncio curto e venda dias depois"], ["09:36", "Vender sem empurrar e lista de transmissão"], ["11:29", "Fazendo posts com IA"], ["15:02", "Instagram para falar de Jesus"], ["17:01", "Reels de teste: testar antes de postar"], ["19:19", "Não se prenda a conteúdo: tenha processo de venda"], ["20:00", "Perfil privado e conta em análise"]], tarefa:[] },
+  ]},
+  { nome: "Aula 2 · Gerenciador de Anúncios (09/11)", aulas: [
+    { id:"a2", tipo:"Conteúdo", titulo:"Gerenciador de Anúncios: da estratégia à primeira campanha", dur:"65 min", video:"",
+      resumo:"Antes do botão vem a estratégia. Os objetivos de campanha (alcance, tráfego, engajamento, cadastro e vendas), como entrar no Gerenciador e montar, passo a passo, uma campanha de engajamento para o WhatsApp: orçamento, horário, público, raio, anúncio e mensagem de boas-vindas.", caps:[["00:00", "Como funcionam os nossos encontros"], ["01:40", "Antes do botão vem a estratégia"], ["03:02", "Por que a dona do negócio precisa entender de anúncio"], ["03:52", "Alcance: a panfletagem barata (e por que não traz venda)"], ["05:36", "Os objetivos de campanha: mensagens, cadastro, vendas, tráfego e engajamento"], ["07:20", "Entrando no Gerenciador pelo Facebook"], ["09:45", "Botão Criar: campanha manual"], ["10:53", "Cada objetivo na tela do Gerenciador"], ["11:33", "Dá para fazer pelo celular?"], ["16:37", "CPM: por que vendas custa mais que engajamento"], ["18:45", "Configurando a campanha de engajamento"], ["21:44", "Destino: mensagens no WhatsApp"], ["23:33", "Orçamento: começar com R$ 6 por dia"], ["24:19", "Anúncio é investimento, não caça-níquel"], ["25:31", "Quando começar a rodar e programar horário"], ["27:43", "Por que o horário da noite funciona bem"], ["28:47", "Público: localização e raio em km"], ["32:45", "Idade, gênero e quem decide a compra"], ["33:53", "Dúvida: dá para segmentar por renda? Interesses"], ["44:33", "Posicionamentos e dispositivos"], ["46:50", "Criando o anúncio: imagem, vídeo e botão"], ["53:14", "Mensagem de boas-vindas no WhatsApp"], ["56:23", "Publicar e a análise do Meta"], ["58:31", "Simples, mas não é fácil: o resultado do processo"], ["1:01:11", "Tráfego pago para multiplicar sementes"]], tarefa:["Entre no Gerenciador de Anúncios pelo Facebook (menu da esquerda) e crie a sua conta, se ainda não tiver.", "Escolha o objetivo de cada ação: alcance para ser conhecida no bairro, engajamento para receber mensagens.", "Monte uma campanha de engajamento com destino WhatsApp, R$ 6 por dia, o raio onde você atende e a idade de quem compra de você. Pode deixar em rascunho.", "Traga na próxima aula a sua dúvida com o minuto do vídeo."] },
+    { id:"a2d", tipo:"Tira-dúvidas", titulo:"Tira-dúvidas: preço, valor e como qualificar a cliente", dur:"20 min", video:"",
+      resumo:"Colocar ou não o preço no post, como filtrar quem só quer saber o valor, uma mini página como catálogo e como apresentar o produto no WhatsApp para passar valor antes do preço.", caps:[["00:00", "Arinete: a cliente pergunta o preço e não fecha"], ["01:04", "Uma página com preço para qualificar quem chega"], ["03:52", "Preço na legenda e nos stories filtra a cliente"], ["06:36", "Erika: colocar preço no post espanta a cliente?"], ["08:08", "Não existe certo e errado: teste o que funciona para você"], ["10:40", "Como apresentar o produto para passar valor"], ["13:48", "No WhatsApp: contexto antes do preço"], ["16:08", "Testar por 7 dias e retomar quem não comprou"], ["17:16", "Lisange: começando aos poucos no Instagram"]], tarefa:[] },
+  ]},
+];
+/* ========================== */
+
+const $ = s => document.querySelector(s);
+const todas = MODULOS.flatMap(m => m.aulas);
+const guardar = (k,v) => { try{ localStorage.setItem(k, JSON.stringify(v)); }catch(e){} };
+const ler = (k,d) => { try{ const v = localStorage.getItem(k); return v ? JSON.parse(v) : d; }catch(e){ return d; } };
+let feitas = ler("ncp_feitas", []);
+let atual = null, ytPlayer = null;
+
+function seg(t){ return t.split(":").map(Number).reduce((a,b)=>a*60+b,0); }
+function ytId(u){ const m = u.match(/(?:youtu\.be\/|v=|embed\/|shorts\/)([\w-]{11})/); return m && m[1]; }
+function driveId(u){ const m = u.match(/\/d\/([\w-]+)/) || u.match(/id=([\w-]+)/); return m && m[1]; }
+
+function montarPlayer(a, inicio){
+  const p = $("#player"); ytPlayer = null;
+  if(!a.video){ p.innerHTML = '<div class="vazio"><div><strong>Vídeo chegando</strong>A Delaine está subindo esta aula. Volte em breve.</div></div>'; return; }
+  const y = ytId(a.video), d = driveId(a.video);
+  if(y){ p.innerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${y}?rel=0&modestbranding=1&start=${inicio||0}${inicio?'&autoplay=1':''}" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen title="${a.titulo}"></iframe>`; }
+  else if(d){ p.innerHTML = `<iframe src="https://drive.google.com/file/d/${d}/preview" allow="autoplay; fullscreen" allowfullscreen title="${a.titulo}"></iframe>`; }
+  else { p.innerHTML = `<video controls playsinline preload="metadata" src="${a.video}"></video>`; if(inicio){ const v=p.querySelector("video"); v.currentTime=inicio; v.play().catch(()=>{}); } }
+}
+
+function irPara(t){
+  const v = $("#player video");
+  if(v){ v.currentTime = seg(t); v.play().catch(()=>{}); return; }
+  if(ytId(atual.video||"")) montarPlayer(atual, seg(t));
+  window.scrollTo({top:0,behavior:"smooth"});
+}
+
+function abrir(id){
+  atual = todas.find(a => a.id === id) || todas[0];
+  guardar("ncp_ultima", atual.id);
+  montarPlayer(atual);
+  const duv = atual.tipo === "Tira-dúvidas";
+  $("#tag").textContent = atual.tipo; $("#tag").className = "tag" + (duv ? " duv" : "");
+  $("#titulo").textContent = atual.titulo;
+  $("#meta").textContent = MODULOS.find(m => m.aulas.includes(atual)).nome + " · " + atual.dur;
+  $("#resumo").textContent = atual.resumo;
+  $("#caps").innerHTML = atual.caps.map(c => `<li data-t="${c[0]}"><time>${c[0]}</time><span>${c[1]}</span></li>`).join("");
+  $("#blCaps").style.display = atual.caps.length ? "" : "none";
+  $("#tarefa").innerHTML = atual.tarefa.map(t => `<li>${t}</li>`).join("");
+  $("#blTarefa").style.display = atual.tarefa.length ? "" : "none";
+  const mats = atual.materiais || [];
+  $("#mat").innerHTML = mats.map(m => `<a class="mat" href="${m[1]}" target="_blank" rel="noopener"><span>${m[0]}</span><b>Abrir</b></a>`).join("");
+  $("#blMat").style.display = mats.length ? "" : "none";
+  const i = todas.indexOf(atual);
+  $("#bProx").style.display = i < todas.length - 1 ? "" : "none";
+  render();
+}
+
+function render(){
+  $("#lista").innerHTML = MODULOS.map(m => `<div class="mod"><h5>${m.nome}</h5>` + m.aulas.map(a => {
+    const n = todas.indexOf(a) + 1, ok = feitas.includes(a.id);
+    return `<button class="aula ${a===atual?'ativa':''} ${ok?'ok':''}" data-id="${a.id}"><span class="n">${ok?'✓':n}</span><span><b>${a.titulo}</b><small>${a.tipo} · ${a.dur}</small></span></button>`;
+  }).join("") + `</div>`).join("");
+  const ok = atual && feitas.includes(atual.id);
+  $("#bFeito").textContent = ok ? "Assistida ✓" : "Marcar como assistida";
+  $("#bFeito").className = "btn" + (ok ? " feito" : "");
+  const pct = Math.round(feitas.filter(f => todas.some(a => a.id === f)).length / todas.length * 100);
+  $("#barra").style.width = pct + "%";
+  $("#progTopo").textContent = pct + "% concluído";
+}
+
+$("#lista").addEventListener("click", e => { const b = e.target.closest(".aula"); if(b){ abrir(b.dataset.id); window.scrollTo({top:0,behavior:"smooth"}); } });
+$("#caps").addEventListener("click", e => { const li = e.target.closest("li"); if(li) irPara(li.dataset.t); });
+$("#bFeito").addEventListener("click", () => {
+  feitas = feitas.includes(atual.id) ? feitas.filter(f => f !== atual.id) : [...feitas, atual.id];
+  guardar("ncp_feitas", feitas); render();
+});
+$("#bProx").addEventListener("click", () => { const i = todas.indexOf(atual); if(todas[i+1]){ abrir(todas[i+1].id); window.scrollTo({top:0,behavior:"smooth"}); } });
+
+function entrar(){ $("#portao").style.display = "none"; $("#area").style.display = "block"; abrir(ler("ncp_ultima", todas[0].id)); }
+$("#fEntrar").addEventListener("submit", e => {
+  e.preventDefault();
+  if($("#codigo").value.trim().toUpperCase() === CODIGO){ guardar("ncp_ok", true); entrar(); }
+  else $("#erro").textContent = "Código não confere. Confira com a Delaine.";
+});
+/* Por enquanto a área fica aberta (decisão de 10/11/2026). Para voltar a pedir código: ABERTA = false. */
+const ABERTA = true;
+if(ABERTA || ler("ncp_ok", false)) entrar();
+</script>
+</body>
+</html>
